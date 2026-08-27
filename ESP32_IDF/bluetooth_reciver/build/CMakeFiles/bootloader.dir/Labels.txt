@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/CMakeFiles/bootloader
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/CMakeFiles/bootloader.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/CMakeFiles/bootloader-complete.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,0 +1,18 @@
+Command: ninja all
+[1/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bluetooth_reciver.c.obj
+[2/9] Linking C static library esp-idf/main/libmain.a
+[3/9] Performing build step for 'bootloader'
+[1/1] cd /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader/esp-idf/esptool_py && /home/hannes-karlsson/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/hannes-karlsson/.espressif/v5.5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[4/9] No install step for 'bootloader'
+[5/9] Completed 'bootloader'
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable bluetooth_reciver.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.12.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bluetooth_reciver.bin
+[9/9] cd /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/esp-idf/esptool_py && /home/hannes-karlsson/.espressif/python_env/idf5.5_py3.14_env/bin/python /home/hannes-karlsson/.espressif/v5.5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/partition_table/partition-table.bin /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/bluetooth_reciver/build/bluetooth_reciver.bin
+bluetooth_reciver.bin binary size 0x27920 bytes. Smallest app partition is 0x100000 bytes. 0xd86e0 bytes (85%) free.
