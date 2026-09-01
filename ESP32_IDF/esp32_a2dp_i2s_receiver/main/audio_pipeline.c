@@ -10,7 +10,6 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
-#include "freertos/ringbuf.h"
 #include "freertos/task.h"
 
 /* User-confirmed I2S wiring. */
@@ -35,16 +34,41 @@
 #define I2S_WRITE_BYTES            2048U
 
 #define AUDIO_EVENT_STREAMING      BIT0
+#define AUDIO_EVENT_I2S_READY      BIT1
+#define AUDIO_EVENT_I2S_FAILED     BIT2
 
 static const char *TAG = "AUDIO_PIPELINE";
 
-static RingbufHandle_t s_pcm_ring;
+static uint8_t *s_pcm_ring;
+static uint32_t s_pcm_write_seq;
+static uint32_t s_pcm_read_seq;
 static EventGroupHandle_t s_audio_events;
 static TaskHandle_t s_i2s_task;
 static i2s_chan_handle_t s_i2s_tx;
 
 static portMUX_TYPE s_stats_lock = portMUX_INITIALIZER_UNLOCKED;
 static audio_pipeline_stats_t s_stats;
+static esp_err_t s_i2s_init_result;
+
+static esp_err_t init_i2s(void);
+
+static void stats_update_buffer_locked(size_t buffered_bytes)
+{
+    if (buffered_bytes < s_stats.min_buffered_bytes) {
+        s_stats.min_buffered_bytes = buffered_bytes;
+    }
+    if (buffered_bytes > s_stats.max_buffered_bytes) {
+        s_stats.max_buffered_bytes = buffered_bytes;
+    }
+}
+
+
+static void stats_note_buffer_level(size_t buffered_bytes)
+{
+    portENTER_CRITICAL(&s_stats_lock);
+    stats_update_buffer_locked(buffered_bytes);
+    portEXIT_CRITICAL(&s_stats_lock);
+}
 
 
 static bool is_streaming(void)
@@ -55,14 +79,13 @@ static bool is_streaming(void)
 
 static size_t ring_bytes_waiting(void)
 {
-    UBaseType_t waiting = 0;
-
     if (s_pcm_ring == NULL) {
         return 0;
     }
 
-    vRingbufferGetInfo(s_pcm_ring, NULL, NULL, NULL, NULL, &waiting);
-    return (size_t)waiting;
+    uint32_t write_seq = __atomic_load_n(&s_pcm_write_seq, __ATOMIC_ACQUIRE);
+    uint32_t read_seq = __atomic_load_n(&s_pcm_read_seq, __ATOMIC_ACQUIRE);
+    return (size_t)(write_seq - read_seq);
 }
 
 
@@ -85,16 +108,8 @@ static void stats_record_received(uint32_t length)
 
 static void discard_all_buffered_audio(void)
 {
-    for (;;) {
-        size_t length = 0;
-        void *data = xRingbufferReceiveUpTo(s_pcm_ring, &length, 0, I2S_WRITE_BYTES);
-
-        if (data == NULL) {
-            return;
-        }
-
-        vRingbufferReturnItem(s_pcm_ring, data);
-    }
+    uint32_t write_seq = __atomic_load_n(&s_pcm_write_seq, __ATOMIC_ACQUIRE);
+    __atomic_store_n(&s_pcm_read_seq, write_seq, __ATOMIC_RELEASE);
 }
 
 
@@ -126,13 +141,14 @@ static bool write_all_to_i2s(const uint8_t *data, size_t length)
 
 static bool wait_for_prefill(void)
 {
-    /* Remove packet notifications accumulated during the previous run. */
-    (void)ulTaskNotifyTake(pdTRUE, 0);
+    stats_increment(&s_stats.prefill_waits);
 
     while (is_streaming() && ring_bytes_waiting() < PCM_PREFILL_BYTES) {
-        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        stats_note_buffer_level(ring_bytes_waiting());
+        vTaskDelay(pdMS_TO_TICKS(1));
     }
 
+    stats_note_buffer_level(ring_bytes_waiting());
     return is_streaming();
 }
 
@@ -140,6 +156,15 @@ static bool wait_for_prefill(void)
 static void i2s_feeder_task(void *argument)
 {
     (void)argument;
+
+    /* Allocate the I2S interrupt on core 1, away from the core-0 BT stack. */
+    s_i2s_init_result = init_i2s();
+    if (s_i2s_init_result != ESP_OK) {
+        xEventGroupSetBits(s_audio_events, AUDIO_EVENT_I2S_FAILED);
+        vTaskDelete(NULL);
+        return;
+    }
+    xEventGroupSetBits(s_audio_events, AUDIO_EVENT_I2S_READY);
 
     for (;;) {
         xEventGroupWaitBits(
@@ -157,17 +182,16 @@ static void i2s_feeder_task(void *argument)
             continue;
         }
 
-        while (is_streaming()) {
-            size_t length = 0;
-            uint8_t *data = xRingbufferReceiveUpTo(
-                s_pcm_ring,
-                &length,
-                pdMS_TO_TICKS(25),
-                I2S_WRITE_BYTES
-            );
+        stats_note_buffer_level(ring_bytes_waiting());
 
-            if (data == NULL) {
+        while (is_streaming()) {
+            uint32_t read_seq = __atomic_load_n(&s_pcm_read_seq, __ATOMIC_RELAXED);
+            uint32_t write_seq = __atomic_load_n(&s_pcm_write_seq, __ATOMIC_ACQUIRE);
+            size_t available = (size_t)(write_seq - read_seq);
+
+            if (available == 0) {
                 stats_increment(&s_stats.underruns);
+                stats_note_buffer_level(ring_bytes_waiting());
 
                 /*
                  * The DMA auto-clear option outputs zeros. Rebuild the jitter
@@ -179,13 +203,17 @@ static void i2s_feeder_task(void *argument)
                 continue;
             }
 
-            if (!is_streaming()) {
-                vRingbufferReturnItem(s_pcm_ring, data);
-                break;
+            size_t offset = read_seq & (PCM_RING_BYTES - 1U);
+            size_t length = available < I2S_WRITE_BYTES ? available : I2S_WRITE_BYTES;
+            size_t contiguous = PCM_RING_BYTES - offset;
+            if (length > contiguous) {
+                length = contiguous;
             }
+            length -= length % PCM_FRAME_BYTES;
 
-            bool success = write_all_to_i2s(data, length);
-            vRingbufferReturnItem(s_pcm_ring, data);
+            bool success = write_all_to_i2s(s_pcm_ring + offset, length);
+            __atomic_store_n(&s_pcm_read_seq, read_seq + length, __ATOMIC_RELEASE);
+            stats_note_buffer_level(ring_bytes_waiting());
 
             if (!success) {
                 break;
@@ -231,16 +259,7 @@ static esp_err_t init_i2s(void)
         },
     };
 
-    /* The audio PLL gives a more accurate 44.1-kHz clock on ESP32. */
-    standard_config.clk_cfg.clk_src = I2S_CLK_SRC_APLL;
-
     err = i2s_channel_init_std_mode(s_i2s_tx, &standard_config);
-    if (err != ESP_OK) {
-        ESP_LOGW(TAG, "APLL I2S setup failed (%s); trying default clock", esp_err_to_name(err));
-        standard_config.clk_cfg = (i2s_std_clk_config_t)
-            I2S_STD_CLK_DEFAULT_CONFIG(PCM_RATE_HZ);
-        err = i2s_channel_init_std_mode(s_i2s_tx, &standard_config);
-    }
 
     if (err != ESP_OK) {
         i2s_del_channel(s_i2s_tx);
@@ -273,25 +292,20 @@ esp_err_t audio_pipeline_init(void)
         return ESP_ERR_INVALID_STATE;
     }
 
-    s_pcm_ring = xRingbufferCreate(PCM_RING_BYTES, RINGBUF_TYPE_BYTEBUF);
+    s_pcm_ring = malloc(PCM_RING_BYTES);
     if (s_pcm_ring == NULL) {
         return ESP_ERR_NO_MEM;
     }
 
+    portENTER_CRITICAL(&s_stats_lock);
+    s_stats.min_buffered_bytes = PCM_RING_BYTES;
+    portEXIT_CRITICAL(&s_stats_lock);
+
     s_audio_events = xEventGroupCreate();
     if (s_audio_events == NULL) {
-        vRingbufferDelete(s_pcm_ring);
+        free(s_pcm_ring);
         s_pcm_ring = NULL;
         return ESP_ERR_NO_MEM;
-    }
-
-    esp_err_t err = init_i2s();
-    if (err != ESP_OK) {
-        vEventGroupDelete(s_audio_events);
-        vRingbufferDelete(s_pcm_ring);
-        s_audio_events = NULL;
-        s_pcm_ring = NULL;
-        return err;
     }
 
     BaseType_t created = xTaskCreatePinnedToCore(
@@ -305,14 +319,27 @@ esp_err_t audio_pipeline_init(void)
     );
 
     if (created != pdPASS) {
-        i2s_channel_disable(s_i2s_tx);
-        i2s_del_channel(s_i2s_tx);
         vEventGroupDelete(s_audio_events);
-        vRingbufferDelete(s_pcm_ring);
-        s_i2s_tx = NULL;
+        free(s_pcm_ring);
         s_audio_events = NULL;
         s_pcm_ring = NULL;
         return ESP_ERR_NO_MEM;
+    }
+
+    EventBits_t init_bits = xEventGroupWaitBits(
+        s_audio_events,
+        AUDIO_EVENT_I2S_READY | AUDIO_EVENT_I2S_FAILED,
+        pdFALSE,
+        pdFALSE,
+        portMAX_DELAY
+    );
+    if ((init_bits & AUDIO_EVENT_I2S_FAILED) != 0) {
+        s_i2s_task = NULL;
+        vEventGroupDelete(s_audio_events);
+        free(s_pcm_ring);
+        s_audio_events = NULL;
+        s_pcm_ring = NULL;
+        return s_i2s_init_result;
     }
 
     return ESP_OK;
@@ -326,12 +353,17 @@ void audio_pipeline_set_streaming(bool streaming)
     }
 
     if (streaming) {
+        portENTER_CRITICAL(&s_stats_lock);
+        ++s_stats.stream_starts;
+        s_stats.min_buffered_bytes = PCM_RING_BYTES;
+        s_stats.max_buffered_bytes = 0;
+        portEXIT_CRITICAL(&s_stats_lock);
         xEventGroupSetBits(s_audio_events, AUDIO_EVENT_STREAMING);
     } else {
         xEventGroupClearBits(s_audio_events, AUDIO_EVENT_STREAMING);
     }
 
-    /* Wake the feeder if it is waiting for prefill or a state transition. */
+    /* Wake the feeder if it is waiting for a streaming-state transition. */
     xTaskNotifyGive(s_i2s_task);
 }
 
@@ -355,13 +387,22 @@ void audio_pipeline_push(const uint8_t *data, uint32_t length)
 
     stats_record_received(length);
 
-    /* Zero timeout: the Bluetooth stack must never wait for the I2S side. */
-    if (xRingbufferSend(s_pcm_ring, data, length, 0) != pdTRUE) {
+    uint32_t write_seq = __atomic_load_n(&s_pcm_write_seq, __ATOMIC_RELAXED);
+    uint32_t read_seq = __atomic_load_n(&s_pcm_read_seq, __ATOMIC_ACQUIRE);
+    size_t buffered = (size_t)(write_seq - read_seq);
+    if (length > PCM_RING_BYTES - buffered) {
         stats_increment(&s_stats.overruns);
         return;
     }
 
-    xTaskNotifyGive(s_i2s_task);
+    size_t offset = write_seq & (PCM_RING_BYTES - 1U);
+    size_t first = PCM_RING_BYTES - offset;
+    if (first > length) {
+        first = length;
+    }
+    memcpy(s_pcm_ring + offset, data, first);
+    memcpy(s_pcm_ring, data + first, length - first);
+    __atomic_store_n(&s_pcm_write_seq, write_seq + length, __ATOMIC_RELEASE);
 }
 
 
@@ -376,4 +417,7 @@ void audio_pipeline_get_stats(audio_pipeline_stats_t *stats)
     portEXIT_CRITICAL(&s_stats_lock);
 
     stats->buffered_bytes = ring_bytes_waiting();
+    if (stats->min_buffered_bytes > stats->buffered_bytes) {
+        stats->min_buffered_bytes = stats->buffered_bytes;
+    }
 }

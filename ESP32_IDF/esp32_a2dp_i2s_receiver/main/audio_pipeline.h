@@ -11,6 +11,8 @@ extern "C" {
 #endif
 
 typedef struct {
+    uint32_t stream_starts;
+    uint32_t prefill_waits;
     uint32_t received_packets;
     uint32_t received_bytes;
     uint32_t dropped_while_stopped;
@@ -19,6 +21,8 @@ typedef struct {
     uint32_t underruns;
     uint32_t i2s_errors;
     size_t buffered_bytes;
+    size_t min_buffered_bytes;
+    size_t max_buffered_bytes;
 } audio_pipeline_stats_t;
 
 /*

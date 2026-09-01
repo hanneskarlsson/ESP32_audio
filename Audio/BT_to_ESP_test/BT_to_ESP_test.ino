@@ -14,18 +14,14 @@ void setup() {
   Serial.begin(115200);
   AudioToolsLogger.begin(Serial, AudioToolsLogLevel::Warning);
 
-  // ----------------------------------------------------------------
-  // Configure Input Stream: Tinysine -> ESP32 
-  // ----------------------------------------------------------------
   auto cfg_in = i2s_in.defaultConfig(RX_MODE);
-  cfg_in.port_no = 0;                 // Use I2S Port 0
+  cfg_in.port_no = 0;                
   cfg_in.sample_rate = 48000; 
   cfg_in.bits_per_sample = 16;
   cfg_in.channels = 2;
-  cfg_in.i2s_format = I2S_PHILIPS_FORMAT; // Standard I2S
-  cfg_in.is_master = true;            // ESP32 generates clock for BT module
-
-  // Input pins configuration
+  cfg_in.i2s_format = I2S_PHILIPS_FORMAT; 
+  cfg_in.is_master = true;   
+        
   cfg_in.pin_bck = 14;  // BCLK
   cfg_in.pin_ws = 15;   // LRCK
   cfg_in.pin_data = 34; // SD / Data In

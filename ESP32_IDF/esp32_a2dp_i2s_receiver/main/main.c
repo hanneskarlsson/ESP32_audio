@@ -6,7 +6,6 @@
 #include "audio_pipeline.h"
 #include "esp_a2dp_api.h"
 #include "esp_bt.h"
-#include "esp_bt_device.h"
 #include "esp_bt_main.h"
 #include "esp_err.h"
 #include "esp_gap_bt_api.h"
@@ -40,16 +39,17 @@ static const char *connection_state_name(esp_a2d_connection_state_t state)
 
 static const char *audio_state_name(esp_a2d_audio_state_t state)
 {
-    switch (state) {
-        case ESP_A2D_AUDIO_STATE_REMOTE_SUSPEND:
-            return "remote suspend";
-        case ESP_A2D_AUDIO_STATE_STOPPED:
-            return "stopped";
-        case ESP_A2D_AUDIO_STATE_STARTED:
-            return "started";
-        default:
-            return "unknown";
+    if (state == ESP_A2D_AUDIO_STATE_SUSPEND) {
+        return "suspended";
     }
+    if (state == ESP_A2D_AUDIO_STATE_STOPPED) {
+        return "stopped";
+    }
+    if (state == ESP_A2D_AUDIO_STATE_STARTED) {
+        return "started";
+    }
+
+    return "unknown";
 }
 
 
@@ -207,7 +207,13 @@ static void diagnostics_task(void *argument)
 {
     (void)argument;
 
+    uint32_t previous_stream_starts = 0;
+    uint32_t previous_prefill_waits = 0;
     uint32_t previous_received_bytes = 0;
+    uint32_t previous_overruns = 0;
+    uint32_t previous_underruns = 0;
+    uint32_t previous_bad_packets = 0;
+    uint32_t previous_i2s_errors = 0;
 
     for (;;) {
         vTaskDelay(pdMS_TO_TICKS(1000));
@@ -217,17 +223,37 @@ static void diagnostics_task(void *argument)
 
         uint32_t bytes_per_second = stats.received_bytes - previous_received_bytes;
         previous_received_bytes = stats.received_bytes;
+        uint32_t stream_start_delta = stats.stream_starts - previous_stream_starts;
+        previous_stream_starts = stats.stream_starts;
+        uint32_t prefill_wait_delta = stats.prefill_waits - previous_prefill_waits;
+        previous_prefill_waits = stats.prefill_waits;
+        uint32_t overrun_delta = stats.overruns - previous_overruns;
+        previous_overruns = stats.overruns;
+        uint32_t underrun_delta = stats.underruns - previous_underruns;
+        previous_underruns = stats.underruns;
+        uint32_t bad_packet_delta = stats.bad_packets - previous_bad_packets;
+        previous_bad_packets = stats.bad_packets;
+        uint32_t i2s_error_delta = stats.i2s_errors - previous_i2s_errors;
+        previous_i2s_errors = stats.i2s_errors;
 
         ESP_LOGI(
             TAG,
-            "PCM rx=%" PRIu32 " B/s fill=%u over=%" PRIu32
-            " under=%" PRIu32 " bad=%" PRIu32 " i2s_err=%" PRIu32,
+            "PCM rx=%" PRIu32 " B/s fill=%u min=%u max=%u"
+            " d_over=%" PRIu32 " d_under=%" PRIu32 " d_bad=%" PRIu32
+            " d_i2s=%" PRIu32 " starts=%" PRIu32 " d_prefill=%" PRIu32
+            " tot_over=%" PRIu32 " tot_under=%" PRIu32,
             bytes_per_second,
             (unsigned)stats.buffered_bytes,
+            (unsigned)stats.min_buffered_bytes,
+            (unsigned)stats.max_buffered_bytes,
+            overrun_delta,
+            underrun_delta,
+            bad_packet_delta,
+            i2s_error_delta,
+            stream_start_delta,
+            prefill_wait_delta,
             stats.overruns,
-            stats.underruns,
-            stats.bad_packets,
-            stats.i2s_errors
+            stats.underruns
         );
     }
 }
@@ -258,7 +284,7 @@ static void initialize_bluetooth(void)
     ESP_ERROR_CHECK(esp_bluedroid_init());
     ESP_ERROR_CHECK(esp_bluedroid_enable());
 
-    ESP_ERROR_CHECK(esp_bt_dev_set_device_name(BLUETOOTH_DEVICE_NAME));
+    ESP_ERROR_CHECK(esp_bt_gap_set_device_name(BLUETOOTH_DEVICE_NAME));
     ESP_ERROR_CHECK(esp_bt_gap_register_callback(gap_callback));
 
 #if defined(CONFIG_BT_SSP_ENABLED) && CONFIG_BT_SSP_ENABLED

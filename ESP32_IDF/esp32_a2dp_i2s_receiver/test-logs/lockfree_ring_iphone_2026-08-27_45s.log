@@ -1,0 +1,113 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3920
+entry 0x40080648
+I (29) boot: ESP-IDF v5.4.4 2nd stage bootloader
+I (29) boot: compile time Aug 27 2026 15:33:21
+I (29) boot: Multicore bootloader
+I (31) boot: chip revision: v3.1
+I (34) boot.esp32: SPI Speed      : 40MHz
+I (37) boot.esp32: SPI Mode       : DIO
+I (41) boot.esp32: SPI Flash Size : 2MB
+I (44) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00100000
+I (77) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fd24h (130340) map
+I (133) esp_image: segment 1: paddr=0002fd4c vaddr=3ffbdb60 size=002cch (   716) load
+I (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=7a034h (499764) map
+I (307) esp_image: segment 3: paddr=000aa05c vaddr=3ffbde2c size=04a84h ( 19076) load
+I (315) esp_image: segment 4: paddr=000aeae8 vaddr=40080000 size=17db8h ( 97720) load
+I (353) esp_image: segment 5: paddr=000c68a8 vaddr=50000000 size=0001ch (    28) load
+I (365) boot: Loaded app from partition at offset 0x10000
+I (365) boot: Disabling RNG early entropy source...
+I (375) cpu_start: Multicore app
+I (383) cpu_start: GPIO 3 and 1 are used as console UART I/O pins
+I (384) cpu_start: Pro cpu start user code
+I (384) cpu_start: cpu freq: 160000000 Hz
+I (386) app_init: Application information:
+I (389) app_init: Project name:     esp32_a2dp_i2s_receiver
+I (395) app_init: App version:      10b4844-dirty
+I (399) app_init: Compile time:     Aug 27 2026 17:18:14
+I (404) app_init: ELF file SHA256:  d839902b2...
+I (408) app_init: ESP-IDF:          v5.4.4
+I (412) efuse_init: Min chip rev:     v0.0
+I (416) efuse_init: Max chip rev:     v3.99 
+I (420) efuse_init: Chip rev:         v3.1
+I (424) heap_init: Initializing. RAM available for dynamic allocation:
+I (430) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (435) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (440) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (446) heap_init: At 3FFCA6B8 len 00015948 (86 KiB): DRAM
+I (451) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (456) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (462) heap_init: At 40097DB8 len 00008248 (32 KiB): IRAM
+I (469) spi_flash: detected chip: generic
+I (471) spi_flash: flash io: dio
+W (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (487) coexist: coex firmware version: 2de0784
+I (491) main_task: Started on CPU0
+I (501) main_task: Calling app_main()
+I (511) AUDIO_PIPELINE: I2S ready: 44100 Hz, 16-bit stereo Philips; BCLK=14 WS=15 DATA=22
+I (511) BTDM_INIT: BT controller compile version [440e0f9]
+I (511) BTDM_INIT: Using main XTAL as clock source
+I (521) BTDM_INIT: Bluetooth MAC: a0:b7:65:04:5f:e6
+I (521) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+I (611) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)
+W (1201) BT_BTC: A2DP Enable without AVRC
+I (1211) A2DP_RECEIVER: A2DP sink initialized; device is discoverable
+I (1211) A2DP_RECEIVER: Ready. Pair with Bluetooth device 'ESP32-I2S-Receiver'
+I (1211) main_task: Returned from app_main()
+I (2211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (3211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (4211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (5211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (6211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (7211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (8211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (9211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (10211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (11211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (12211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (13211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (14211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (15211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (16211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (17211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (18211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (19211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (20211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (21211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (22211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (23211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (24211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (25211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (26211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (27211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (28211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (29211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (30211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (31211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (32211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (33211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (34211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (35211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (36211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (37211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (38211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (39211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (40211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (41211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (42211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (43211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (44211) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0

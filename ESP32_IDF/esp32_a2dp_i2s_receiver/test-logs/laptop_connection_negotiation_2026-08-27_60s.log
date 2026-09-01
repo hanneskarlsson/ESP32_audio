@@ -1,0 +1,53 @@
+I (16170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (17170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+W (17560) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+I (18170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (19170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (19530) A2DP_RECEIVER: Bluetooth authentication successful: hannes-karlsson-ThinkBook-14-G2-ITL
+I (19700) A2DP_RECEIVER: A2DP connecting: 64:79:f0:40:e2:63
+I (19740) A2DP_RECEIVER: Negotiated SBC sample rate: 48000 Hz
+E (19750) A2DP_RECEIVER: This build requires 44100-Hz PCM, but the source negotiated 48000 Hz
+W (19780) BT_APPL: new conn_srvc id:19, app_id:0
+I (19780) A2DP_RECEIVER: A2DP connected: 64:79:f0:40:e2:63
+W (19780) BT_BTC: AVRC not Init, not using it.
+I (20170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (21170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (22170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (22700) BT_LOG: bta_av_link_role_ok hndl:x41 role:1 conn_audio:x1 bits:1 features:x8400
+
+W (22700) BT_APPL: new conn_srvc id:19, app_id:1
+I (22700) A2DP_RECEIVER: A2DP audio started
+E (22700) A2DP_RECEIVER: Stream started without a supported 44.1-kHz SBC configuration
+I (23170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (24170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (25170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (26170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (27170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (28170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (29170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (30170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (31170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (32170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (33170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (34170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (35170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (36170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (37170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (38170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (39170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (40170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (41170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (42170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (43170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (44170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (45170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (46170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (47170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (48170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (49170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (50170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (51170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (52170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (53170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (54170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0
+I (55170) A2DP_RECEIVER: PCM rx=0 B/s fill=0 min=0 max=0 d_over=0 d_under=0 d_bad=0 d_i2s=0 starts=0 d_prefill=0 tot_over=0 tot_under=0

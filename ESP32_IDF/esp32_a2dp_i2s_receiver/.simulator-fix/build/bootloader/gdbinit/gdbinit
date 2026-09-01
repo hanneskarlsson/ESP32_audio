@@ -1,0 +1,2 @@
+source /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader/gdbinit/symbols
+source /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader/gdbinit/connect

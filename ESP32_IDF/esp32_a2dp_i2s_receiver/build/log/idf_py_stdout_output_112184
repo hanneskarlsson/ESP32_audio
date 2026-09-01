@@ -1,0 +1,339 @@
+.1
+[0;32mI (423) heap_init:ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3920
+entry 0x40080648
+[0;32mI (29) boot: ESP-IDF v5.4.4 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 27 2026 15:33:21[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2031ch (131868) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=00030344 vaddr=3ffbdb60 size=04d50h ( 19792) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=0003509c vaddr=40080000 size=0af7ch ( 44924) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=79ec4h (499396) map[0m
+[0;32mI (329) esp_image: segment 4: paddr=000b9eec vaddr=4008af7c size=0d9a0h ( 55712) load[0m
+[0;32mI (351) esp_image: segment 5: paddr=000c7894 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (363) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (363) boot: Disabling RNG early entropy source...[0m
+[0;32mI (374) cpu_start: Multicore app[0m
+[0;32mI (382) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (382) cpu_start: Pro cpu start user code[0m
+[0;32mI (383) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (384) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     esp32_a2dp_i2s_receiver[0m
+[0;32mI (393) app_init: App version:      10b4844-dirty[0m
+[0;32mI (398) app_init: Compile time:     Aug 27 2026 15:33:19[0m
+[0;32mI (403) app_init: ELF file SHA256:  ab8c78d50...[0m
+[0;32mI (407) app_init: ESP-IDF:          v5.4.4[0m
+[0;32mI (411) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (415) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (419) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (423) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (429) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (434) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (439) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (444) heap_init: At 3FFCA6A0 len 00015960 (86 KiB): DRAM[0m
+[0;32mI (450) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (455) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (461) heap_init: At 4009891C len 000076E4 (29 KiB): IRAM[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (469) spi_flash: flash io: dio[0m
+[0;33mW (472) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (485) coexist: coex firmware version: 2de0784[0m
+[0;32mI (490) main_task: Started on CPU0[0m
+[0;32mI (500) main_task: Calling app_main()[0m
+[0;32mI (510) AUDIO_PIPELINE: I2S ready: 44100 Hz, 16-bit stereo Philips; BCLK=14 WS=15 DATA=22[0m
+[0;32mI (510) BTDM_INIT: BT controller compile version [440e0f9][0m
+[0;32mI (510) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (520) BTDM_INIT: Bluetooth MAC: a0:b7:65:04:7c:32[0m
+[0;32mI (520) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;33mW (530) phy_init: failed to load RF calibration data (0xffffffff), falling back to full calibration[0m
+[0;32mI (610) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;33mW (1170) BT_BTC: A2DP Enable without AVRC[0m
+[0;32mI (1180) A2DP_RECEIVER: A2DP sink initialized; device is discoverable[0m
+[0;32mI (1190) A2DP_RECEIVER: Ready. Pair with Bluetooth device 'ESP32-I2S-Receiver'[0m
+[0;32mI (1190) main_task: Returned from app_main()[0m
+[0;32mI (2190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (3190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (4190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (5190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (6190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (7190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (8190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (9190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (10190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (11190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (12190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (13190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (14190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (15190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (16190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (17190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (18190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (19190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (20190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (21190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (22190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (23190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (24190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (25190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (26190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (27190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (28190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (29190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (30190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (31190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (32190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (33190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (34190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (35190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (36190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (36800) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;33mW (36910) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;33mW (37090) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 32000[0m
+[0;32mI (37190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (37190) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;33mW (37200) BT_L2CAP: L2CAP - rcvd conn req for unknown PSM: 23[0m
+[0;32mI (37200) A2DP_RECEIVER: A2DP connecting: b4:19:74:29:23:1d[0m
+[0;32mI (37520) A2DP_RECEIVER: Negotiated SBC sample rate: 44100 Hz[0m
+[0;33mW (37910) BT_APPL: new conn_srvc id:19, app_id:0[0m
+[0;32mI (37910) A2DP_RECEIVER: A2DP connected: b4:19:74:29:23:1d[0m
+[0;33mW (37910) BT_BTC: AVRC not Init, not using it.[0m
+[0;32mI (38190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (39190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (40190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (41110) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(400 800)[0m
+[0;33mW (41130) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 800, status 0x0[0m
+[0;32mI (41190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (41610) BT_HCI: hci cmd send: unsniff: hdl 0x80[0m
+[0;33mW (42110) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;32mI (42190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (43190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (44190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (45190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (45310) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(400 800)[0m
+[0;33mW (45320) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 800, status 0x0[0m
+[0;32mI (46190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (47190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (48190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (49190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (50190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (51190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (52190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (53190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (54190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (55190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (56190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (57190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (58190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (59190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (60190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (61190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;32mI (62190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (63110) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;32mI (63130) BT_LOG: bta_av_link_role_ok hndl:x41 role:1 conn_audio:x1 bits:1 features:x8400[0m
+
+[0;33mW (63130) BT_APPL: new conn_srvc id:19, app_id:1[0m
+[0;32mI (63130) A2DP_RECEIVER: A2DP audio started[0m
+[0;32mI (63190) A2DP_RECEIVER: PCM rx=0 B/s fill=0 over=0 under=0 bad=0 i2s_err=0[0m
+[0;33mW (64080) BT_APPL: Sequence numbers error, recv:0x1f, expect:0x1d, recount:0x0[0m
+[0;32mI (64190) A2DP_RECEIVER: PCM rx=143360 B/s fill=6144 over=0 under=4 bad=0 i2s_err=0[0m
+[0;33mW (64730) BT_APPL: Sequence numbers error, recv:0x3a, expect:0x36, recount:0x0[0m
+[0;33mW (65010) BT_APPL: Sequence numbers error, recv:0x47, expect:0x44, recount:0x0[0m
+[0;32mI (65190) A2DP_RECEIVER: PCM rx=143360 B/s fill=2048 over=0 under=8 bad=0 i2s_err=0[0m
+[0;33mW (65260) BT_APPL: Sequence numbers error, recv:0x52, expect:0x50, recount:0x0[0m
+[0;33mW (65720) BT_APPL: Sequence numbers error, recv:0x66, expect:0x63, recount:0x0[0m
+[0;33mW (65930) BT_APPL: Sequence numbers error, recv:0x6e, expect:0x6d, recount:0x0[0m
+[0;33mW (66170) BT_APPL: Sequence numbers error, recv:0x78, expect:0x76, recount:0x0[0m
+[0;32mI (66190) A2DP_RECEIVER: PCM rx=143360 B/s fill=12288 over=1 under=13 bad=0 i2s_err=0[0m
+[0;33mW (66440) BT_APPL: Sequence numbers error, recv:0x85, expect:0x83, recount:0x0[0m
+[0;33mW (66720) BT_APPL: Sequence numbers error, recv:0x91, expect:0x8f, recount:0x0[0m
+[0;33mW (66950) BT_APPL: Sequence numbers error, recv:0x9b, expect:0x99, recount:0x0[0m
+[0;32mI (67190) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 over=2 under=16 bad=0 i2s_err=0[0m
+[0;33mW (67230) BT_APPL: Sequence numbers error, recv:0xa7, expect:0xa5, recount:0x0[0m
+[0;33mW (67480) BT_APPL: Sequence numbers error, recv:0xb2, expect:0xb0, recount:0x0[0m
+[0;33mW (67970) BT_APPL: Sequence numbers error, recv:0xc7, expect:0xc3, recount:0x0[0m
+[0;32mI (68190) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 over=2 under=21 bad=0 i2s_err=0[0m
+[0;33mW (68200) BT_APPL: Sequence numbers error, recv:0xd1, expect:0xcf, recount:0x0[0m
+[0;33mW (68450) BT_APPL: Sequence numbers error, recv:0xdc, expect:0xda, recount:0x0[0m
+[0;33mW (68680) BT_APPL: Sequence numbers error, recv:0xe6, expect:0xe4, recount:0x0[0m
+[0;33mW (68940) BT_APPL: Sequence numbers error, recv:0xf1, expect:0xef, recount:0x0[0m
+[0;32mI (69190) A2DP_RECEIVER: PCM rx=159744 B/s fill=14336 over=2 under=25 bad=0 i2s_err=0[0m
+[0;33mW (69760) BT_APPL: Sequence numbers error, recv:0x110, expect:0x10d, recount:0x0[0m
+[0;33mW (69770) BT_APPL: Sequence numbers error, recv:0x112, expect:0x111, recount:0x0[0m
+[0;33mW (69780) BT_APPL: Sequence numbers error, recv:0x115, expect:0x114, recount:0x0[0m
+[0;33mW (70020) BT_APPL: Sequence numbers error, recv:0x11f, expect:0x11b, recount:0x0[0m
+[0;32mI (70190) A2DP_RECEIVER: PCM rx=126976 B/s fill=0 over=2 under=29 bad=0 i2s_err=0[0m
+[0;33mW (70480) BT_APPL: Sequence numbers error, recv:0x133, expect:0x12f, recount:0x0[0m
+[0;33mW (70730) BT_APPL: Sequence numbers error, recv:0x13e, expect:0x13c, recount:0x0[0m
+[0;33mW (70950) BT_APPL: Sequence numbers error, recv:0x147, expect:0x146, recount:0x0[0m
+[0;32mI (71190) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 over=2 under=34 bad=0 i2s_err=0[0m
+[0;33mW (71190) BT_APPL: Sequence numbers error, recv:0x151, expect:0x14f, recount:0x0[0m
+[0;33mW (71560) BT_APPL: Sequence numbers error, recv:0x15f, expect:0x15e, recount:0x0[0m
+[0;33mW (71870) BT_APPL: Sequence numbers error, recv:0x16f, expect:0x16b, recount:0x0[0m
+[0;33mW (72140) BT_APPL: Sequence numbers error, recv:0x17b, expect:0x179, recount:0x0[0m
+[0;32mI (72190) A2DP_RECEIVER: PCM rx=167936 B/s fill=14336 over=3 under=38 bad=0 i2s_err=0[0m
+[0;33mW (72420) BT_APPL: Sequence numbers error, recv:0x187, expect:0x185, recount:0x0[0m
+[0;33mW (72870) BT_APPL: Sequence numbers error, recv:0x199, expect:0x196, recount:0x0[0m
+[0;32mI (73190) A2DP_RECEIVER: PCM rx=139264 B/s fill=10240 over=3 under=42 bad=0 i2s_err=0[0m
+[0;33mW (73300) BT_APPL: Sequence numbers error, recv:0x1ab, expect:0x1a8, recount:0x0[0m
+[0;33mW (73520) BT_APPL: Sequence numbers error, recv:0x1b5, expect:0x1b3, recount:0x0[0m
+[0;33mW (73750) BT_APPL: Sequence numbers error, recv:0x1c0, expect:0x1bd, recount:0x0[0m
+[0;33mW (74030) BT_APPL: Sequence numbers error, recv:0x1cc, expect:0x1ca, recount:0x0[0m
+[0;32mI (74190) A2DP_RECEIVER: PCM rx=139264 B/s fill=2048 over=3 under=46 bad=0 i2s_err=0[0m
+[0;33mW (74260) BT_APPL: Sequence numbers error, recv:0x1d6, expect:0x1d4, recount:0x0[0m
+[0;33mW (74690) BT_APPL: Sequence numbers error, recv:0x1e8, expect:0x1e5, recount:0x0[0m
+[0;32mI (75190) A2DP_RECEIVER: PCM rx=151552 B/s fill=14336 over=3 under=51 bad=0 i2s_err=0[0m
+[0;33mW (75330) BT_APPL: Sequence numbers error, recv:0x201, expect:0x1fe, recount:0x0[0m
+[0;33mW (75330) BT_APPL: Sequence numbers error, recv:0x203, expect:0x202, recount:0x0[0m
+[0;33mW (75550) BT_APPL: Sequence numbers error, recv:0x20b, expect:0x20a, recount:0x0[0m
+[0;33mW (75570) BT_APPL: Sequence numbers error, recv:0x20e, expect:0x20d, recount:0x0[0m
+[0;33mW (75930) BT_APPL: Sequence numbers error, recv:0x21a, expect:0x219, recount:0x0[0m
+[0;33mW (76180) BT_APPL: Sequence numbers error, recv:0x228, expect:0x223, recount:0x0[0m
+[0;32mI (76190) A2DP_RECEIVER: PCM rx=122880 B/s fill=0 over=3 under=56 bad=0 i2s_err=0[0m
+[0;33mW (76410) BT_APPL: Sequence numbers error, recv:0x232, expect:0x230, recount:0x0[0m
+[0;33mW (76660) BT_APPL: Sequence numbers error, recv:0x23d, expect:0x23b, recount:0x0[0m
+[0;33mW (76940) BT_APPL: Sequence numbers error, recv:0x249, expect:0x247, recount:0x0[0m
+[0;32mI (77190) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 over=3 under=60 bad=0 i2s_err=0[0m
+[0;33mW (77190) BT_APPL: Sequence numbers error, recv:0x254, expect:0x252, recount:0x0[0m
+[0;33mW (77470) BT_APPL: Sequence numbers error, recv:0x260, expect:0x25e, recount:0x0[0m
+[0;33mW (77720) BT_APPL: Sequence numbers error, recv:0x26b, expect:0x269, recount:0x0[0m
+[0;33mW (77940) BT_APPL: Sequence numbers error, recv:0x274, expect:0x273, recount:0x0[0m
+[0;32mI (78190) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 over=3 under=64 bad=0 i2s_err=0[0m
+[0;33mW (78190) BT_APPL: Sequence numbers error, recv:0x27f, expect:0x27d, recount:0x0[0m
+[0;33mW (78650) BT_APPL: Sequence numbers error, recv:0x293, expect:0x28f, recount:0x0[0m
+[0;33mW (79020) BT_APPL: Sequence numbers error, recv:0x2a1, expect:0x2a0, recount:0x0[0m
+[0;32mI (79190) A2DP_RECEIVER: PCM rx=159744 B/s fill=10240 over=3 under=68 bad=0 i2s_err=0[0m
+[0;33mW (79300) BT_APPL: Sequence numbers error, recv:0x2af, expect:0x2ab, recount:0x0[0m
+[0;33mW (79560) BT_APPL: Sequence numbers error, recv:0x2ba, expect:0x2b8, recount:0x0[0m
+[0;32mI (80190) A2DP_RECEIVER: PCM rx=135168 B/s fill=0 over=3 under=72 bad=0 i2s_err=0[0m
+[0;33mW (80240) BT_APPL: Sequence numbers error, recv:0x2d7, expect:0x2d2, recount:0x0[0m
+[0;33mW (80730) BT_APPL: Sequence numbers error, recv:0x2ec, expect:0x2e8, recount:0x0[0m
+[0;33mW (80950) BT_APPL: Sequence numbers error, recv:0x2f5, expect:0x2f4, recount:0x0[0m
+[0;32mI (81190) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 over=3 under=77 bad=0 i2s_err=0[0m
+[0;33mW (81200) BT_APPL: Sequence numbers error, recv:0x301, expect:0x2fe, recount:0x0[0m
+[0;33mW (81480) BT_APPL: Sequence numbers error, recv:0x30d, expect:0x30b, recount:0x0[0m
+[0;33mW (81910) BT_APPL: Sequence numbers error, recv:0x31f, expect:0x31c, recount:0x0[0m
+[0;33mW (82120) BT_APPL: Sequence numbers error, recv:0x327, expect:0x326, recount:0x0[0m
+[0;32mI (82190) A2DP_RECEIVER: PCM rx=155648 B/s fill=10240 over=3 under=81 bad=0 i2s_err=0[0m
+[0;33mW (82750) BT_APPL: Sequence numbers error, recv:0x341, expect:0x33d, recount:0x0[0m
+[0;33mW (83030) BT_APPL: Sequence numbers error, recv:0x34f, expect:0x34b, recount:0x0[0m
+[0;32mI (83190) A2DP_RECEIVER: PCM rx=143360 B/s fill=6144 over=3 under=85 bad=0 i2s_err=0[0m
+[0;33mW (83280) BT_APPL: Sequence numbers error, recv:0x35a, expect:0x358, recount:0x0[0m
+[0;33mW (83560) BT_APPL: Sequence numbers error, recv:0x366, expect:0x364, recount:0x0[0m
+[0;33mW (84010) BT_APPL: Sequence numbers error, recv:0x37a, expect:0x376, recount:0x0[0m
+[0;32mI (84190) A2DP_RECEIVER: PCM rx=147456 B/s fill=8192 over=3 under=89 bad=0 i2s_err=0[0m
+[0;33mW (84290) BT_APPL: Sequence numbers error, recv:0x386, expect:0x384, recount:0x0[0m
+[0;33mW (84520) BT_APPL: Sequence numbers error, recv:0x38f, expect:0x38e, recount:0x0[0m
+[0;33mW (84800) BT_APPL: Sequence numbers error, recv:0x39c, expect:0x399, recount:0x0[0m
+[0;33mW (85180) BT_APPL: Sequence numbers error, recv:0x3aa, expect:0x3a9, recount:0x0[0m
+[0;32mI (85190) A2DP_RECEIVER: PCM rx=126976 B/s fill=0 over=3 under=94 bad=0 i2s_err=0[0m
+[0;33mW (85410) BT_APPL: Sequence numbers error, recv:0x3b5, expect:0x3b2, recount:0x0[0m
+[0;33mW (85640) BT_APPL: Sequence numbers error, recv:0x3c0, expect:0x3bd, recount:0x0[0m
+[0;32mI (86190) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 over=3 under=98 bad=0 i2s_err=0[0m
+[0;33mW (86220) BT_APPL: Sequence numbers error, recv:0x3d7, expect:0x3d4, recount:0x0[0m
+[0;33mW (86630) BT_APPL: Sequence numbers error, recv:0x3e9, expect:0x3e5, recount:0x0[0m
+[0;33mW (86910) BT_APPL: Sequence numbers error, recv:0x3f7, expect:0x3f4, recount:0x0[0m
+[0;33mW (87140) BT_APPL: Sequence numbers error, recv:0x401, expect:0x400, recount:0x0[0m
+[0;32mI (87190) A2DP_RECEIVER: PCM rx=167936 B/s fill=22528 over=4 under=103 bad=0 i2s_err=0[0m
+[0;33mW (87370) BT_APPL: Sequence numbers error, recv:0x40a, expect:0x408, recount:0x0[0m
+[0;33mW (87650) BT_APPL: Sequence numbers error, recv:0x416, expect:0x414, recount:0x0[0m
+[0;33mW (87870) BT_APPL: Sequence numbers error, recv:0x420, expect:0x41e, recount:0x0[0m
+[0;33mW (88130) BT_APPL: Sequence numbers error, recv:0x42b, expect:0x429, recount:0x0[0m
+[0;32mI (88190) A2DP_RECEIVER: PCM rx=147456 B/s fill=24576 over=4 under=107 bad=0 i2s_err=0[0m
+[0;33mW (88380) BT_APPL: Sequence numbers error, recv:0x436, expect:0x434, recount:0x0[0m
+[0;33mW (88610) BT_APPL: Sequence numbers error, recv:0x43f, expect:0x43e, recount:0x0[0m
+[0;32mI (89190) A2DP_RECEIVER: PCM rx=118784 B/s fill=0 over=4 under=111 bad=0 i2s_err=0[0m
+[0;33mW (89240) BT_APPL: Sequence numbers error, recv:0x457, expect:0x454, recount:0x0[0m
+[0;33mW (89260) BT_APPL: Sequence numbers error, recv:0x45c, expect:0x45b, recount:0x0[0m
+[0;33mW (89490) BT_APPL: Sequence numbers error, recv:0x466, expect:0x461, recount:0x0[0m
+[0;33mW (89750) BT_APPL: Sequence numbers error, recv:0x471, expect:0x46f, recount:0x0[0m
+[0;33mW (90030) BT_APPL: Sequence numbers error, recv:0x47d, expect:0x47b, recount:0x0[0m
+[0;32mI (90190) A2DP_RECEIVER: PCM rx=147456 B/s fill=2048 over=4 under=115 bad=0 i2s_err=0[0m
+[0;33mW (90260) BT_APPL: Sequence numbers error, recv:0x486, expect:0x485, recount:0x0[0m
+[0;33mW (90710) BT_APPL: Sequence numbers error, recv:0x49a, expect:0x495, recount:0x0[0m
+[0;33mW (90990) BT_APPL: Sequence numbers error, recv:0x4a6, expect:0x4a5, recount:0x0[0m
+[0;32mI (91190) A2DP_RECEIVER: PCM rx=143360 B/s fill=0 over=5 under=119 bad=0 i2s_err=0[0m
+[0;33mW (91240) BT_APPL: Sequence numbers error, recv:0x4b1, expect:0x4af, recount:0x0[0m
+[0;33mW (91520) BT_APPL: Sequence numbers error, recv:0x4bd, expect:0x4bb, recount:0x0[0m
+[0;33mW (91950) BT_APPL: Sequence numbers error, recv:0x4cf, expect:0x4cc, recount:0x0[0m
+[0;32mI (92190) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 over=5 under=124 bad=0 i2s_err=0[0m
+[0;33mW (92200) BT_APPL: Sequence numbers error, recv:0x4da, expect:0x4d8, recount:0x0[0m
+[0;33mW (92420) BT_APPL: Sequence numbers error, recv:0x4e4, expect:0x4e2, recount:0x0[0m
+[0;33mW (92660) BT_APPL: Sequence numbers error, recv:0x4ed, expect:0x4ec, recount:0x0[0m
+[0;33mW (92890) BT_APPL: Sequence numbers error, recv:0x4f7, expect:0x4f5, recount:0x0[0m
+[0;32mI (93190) A2DP_RECEIVER: PCM rx=172032 B/s fill=22528 over=6 under=128 bad=0 i2s_err=0[0m
+[0;33mW (93370) BT_APPL: Sequence numbers error, recv:0x50d, expect:0x509, recount:0x0[0m
+[0;33mW (93590) BT_APPL: Sequence numbers error, recv:0x516, expect:0x515, recount:0x0[0m
+[0;33mW (93870) BT_APPL: Sequence numbers error, recv:0x522, expect:0x520, recount:0x0[0m
+[0;32mI (94190) A2DP_RECEIVER: PCM rx=135168 B/s fill=10240 over=6 under=132 bad=0 i2s_err=0[0m
+[0;33mW (94310) BT_APPL: Sequence numbers error, recv:0x534, expect:0x531, recount:0x0[0m
+[0;33mW (94590) BT_APPL: Sequence numbers error, recv:0x541, expect:0x53e, recount:0x0[0m
+[0;33mW (94890) BT_APPL: Sequence numbers error, recv:0x54e, expect:0x54c, recount:0x0[0m
+[0;33mW (95170) BT_APPL: Sequence numbers error, recv:0x55a, expect:0x558, recount:0x0[0m
+[0;32mI (95190) A2DP_RECEIVER: PCM rx=135168 B/s fill=8192 over=6 under=136 bad=0 i2s_err=0[0m
+[0;33mW (95440) BT_APPL: Sequence numbers error, recv:0x566, expect:0x565, recount:0x0[0m
+[0;33mW (95680) BT_APPL: Sequence numbers error, recv:0x570, expect:0x56e, recount:0x0[0m
+[0;33mW (96140) BT_APPL: Sequence numbers error, recv:0x584, expect:0x580, recount:0x0[0m
+[0;32mI (96190) A2DP_RECEIVER: PCM rx=163840 B/s fill=16384 over=7 under=140 bad=0 i2s_err=0[0m
+[0;33mW (96570) BT_APPL: Sequence numbers error, recv:0x596, expect:0x593, recount:0x0[0m
+[0;33mW (96850) BT_APPL: Sequence numbers error, recv:0x5a3, expect:0x5a0, recount:0x0[0m
+[0;33mW (97080) BT_APPL: Sequence numbers error, recv:0x5ac, expect:0x5ab, recount:0x0[0m
+[0;32mI (97190) A2DP_RECEIVER: PCM rx=131072 B/s fill=2048 over=7 under=144 bad=0 i2s_err=0[0m
+[0;33mW (97480) BT_APPL: Sequence numbers error, recv:0x5bd, expect:0x5ba, recount:0x0[0m
+[0;33mW (97740) BT_APPL: Sequence numbers error, recv:0x5c9, expect:0x5c6, recount:0x0[0m
+[0;33mW (97970) BT_APPL: Sequence numbers error, recv:0x5d3, expect:0x5d1, recount:0x0[0m
+[0;32mI (98190) A2DP_RECEIVER: PCM rx=135168 B/s fill=0 over=7 under=149 bad=0 i2s_err=0[0m
+[0;33mW (98190) BT_APPL: Sequence numbers error, recv:0x5dc, expect:0x5db, recount:0x0[0m
+[0;33mW (98450) BT_APPL: Sequence numbers error, recv:0x5e7, expect:0x5e5, recount:0x0[0m
+[0;33mW (98730) BT_APPL: Sequence numbers error, recv:0x5f3, expect:0x5f1, recount:0x0[0m
+[0;33mW (98960) BT_APPL: Sequence numbers error, recv:0x5fd, expect:0x5fb, recount:0x0[0m
+[0;32mI (99190) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 over=7 under=153 bad=0 i2s_err=0[0m
+[0;33mW (99210) BT_APPL: Sequence numbers error, recv:0x608, expect:0x606, recount:0x0[0m
+[0;33mW (100050) BT_APPL: Sequence numbers error, recv:0x629, expect:0x625, recount:0x0[0m
+[0;32mI (100190) A2DP_RECEIVER: PCM rx=163840 B/s fill=20480 over=7 under=157 bad=0 i2s_err=0[0m
+[0;33mW (100360) BT_APPL: Sequence numbers error, recv:0x63a, expect:0x634, recount:0x0[0m
+[0;33mW (100640) BT_APPL: Sequence numbers error, recv:0x646, expect:0x644, recount:0x0[0m
+[0;33mW (100900) BT_APPL: Sequence numbers error, recv:0x651, expect:0x64f, recount:0x0[0m
+[0;32mI (101190) A2DP_RECEIVER: PCM rx=139264 B/s fill=14336 over=7 under=161 bad=0 i2s_err=0[0m
+[0;33mW (101330) BT_APPL: Sequence numbers error, recv:0x664, expect:0x660, recount:0x0[0m
+[0;33mW (101560) BT_APPL: Sequence numbers error, recv:0x66d, expect:0x66c, recount:0x0[0m
+[0;33mW (101810) BT_APPL: Sequence numbers error, recv:0x678, expect:0x676, recount:0x0[0m
+[0;33mW (102090) BT_APPL: Sequence numbers error, recv:0x684, expect:0x682, recount:0x0[0m
+[0;32mI (102190) A2DP_RECEIVER: PCM rx=139264 B/s fill=8192 over=7 under=165 bad=0 i2s_err=0[0m
+[0;33mW (102550) BT_APPL: Sequence numbers error, recv:0x698, expect:0x694, recount:0x0[0m
+[0;33mW (103060) BT_APPL: Sequence numbers error, recv:0x6ae, expect:0x6ab, recount:0x0[0m
+[0;32mI (103190) A2DP_RECEIVER: PCM rx=155648 B/s fill=16384 over=8 under=169 bad=0 i2s_err=0[0m
+[0;33mW (103330) BT_APPL: Sequence numbers error, recv:0x6ba, expect:0x6b8, recount:0x0[0m
+[0;33mW (103560) BT_APPL: Sequence numbers error, recv:0x6c3, expect:0x6c2, recount:0x0[0m
+[0;33mW (103810) BT_APPL: Sequence numbers error, recv:0x6cf, expect:0x6cc, recount:0x0[0m
+[0;33mW (104040) BT_APPL: Sequence numbers error, recv:0x6d8, expect:0x6d7, recount:0x0[0m
+[0;32mI (104190) A2DP_RECEIVER: PCM rx=147456 B/s fill=14336 over=9 under=173 bad=0 i2s_err=0[0m
+[0;33mW (104320) BT_APPL: Sequence numbers error, recv:0x6e4, expect:0x6e3, recount:0x0[0m
+[0;33mW (105010) BT_APPL: Sequence numbers error, recv:0x701, expect:0x6fc, recount:0x0[0m
+[0;32mI (105190) A2DP_RECEIVER: PCM rx=131072 B/s fill=0 over=9 under=177 bad=0 i2s_err=0[0m
+[0;33mW (105260) BT_APPL: Sequence numbers error, recv:0x70d, expect:0x70b, recount:0x0[0m
+[0;33mW (105470) BT_APPL: Sequence numbers error, recv:0x714, expect:0x713, recount:0x0[0m
+[0;33mW (105480) BT_APPL: Sequence numbers error, recv:0x716, expect:0x715, recount:0x0[0m
+[0;33mW (105950) BT_APPL: Sequence numbers error, recv:0x72b, expect:0x727, recount:0x0[0m
+[0;32mI (106190) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 over=10 under=181 bad=0 i2s_err=0[0m
+[0;33mW (106230) BT_APPL: Sequence numbers error, recv:0x737, expect:0x735, recount:0x0[0m
+[0;33mW (106510) BT_APPL: Sequence numbers error, recv:0x743, expect:0x741, recount:0x0[0m
+[0;33mW (106790) BT_APPL: Sequence numbers error, recv:0x74f, expect:0x74d, recount:0x0[0m

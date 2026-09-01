@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/.simulator-fix/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

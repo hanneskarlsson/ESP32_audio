@@ -1,0 +1,454 @@
+J��}������ Pro cpu ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3920
+entry 0x40080648
+[0;32mI (29) boot: ESP-IDF v5.4.4 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 28 2026 11:42:51[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b0ach ( 45228) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b0d4 vaddr=3ffb0000 size=0287ch ( 10364) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001d958 vaddr=40080000 size=026c0h (  9920) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13260h ( 78432) map[0m
+[0;32mI (142) esp_image: segment 4: paddr=00033288 vaddr=400826c0 size=0b0f4h ( 45300) load[0m
+[0;32mI (160) esp_image: segment 5: paddr=0003e384 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;32mI (178) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (186) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (192) app_init: Project name:     esp32_tinysine_simulator[0m
+[0;32mI (197) app_init: App version:      10b4844-dirty[0m
+[0;32mI (202) app_init: Compile time:     Aug 28 2026 11:42:42[0m
+[0;32mI (207) app_init: ELF file SHA256:  564987ae8...[0m
+[0;32mI (211) app_init: ESP-IDF:          v5.4.4[0m
+[0;32mI (215) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (219) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (223) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (227) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFB41D0 len 0002BE30 (175 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 4008D7B4 len 0001284C (74 KiB): IRAM[0m
+[0;32mI (261) spi_flash: detected chip: generic[0m
+[0;32mI (263) spi_flash: flash io: dio[0m
+[0;33mW (266) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (279) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) TINYSINE_SIM: TinySine simulator running[0m
+[0;32mI (289) TINYSINE_SIM: PCM: 48000 Hz, signed 16-bit stereo, 500-Hz tone[0m
+[0;32mI (289) TINYSINE_SIM: I2S: Philips one-bit delay, true 24-bit slots, BCLK=2.304 MHz[0m
+[0;32mI (299) TINYSINE_SIM: Pins: BCLK=14 LRCLK=15 SD=22[0m
+[0;32mI (5299) TINYSINE_SIM: continuous output; frames_sent=240480[0m
+[0;32mI (10299) TINYSINE_SIM: continuous output; frames_sent=480480[0m
+[0;32mI (15299) TINYSINE_SIM: continuous output; frames_sent=720480[0m
+[0;32mI (20299) TINYSINE_SIM: continuous output; frames_sent=960480[0m
+[0;32mI (25299) TINYSINE_SIM: continuous output; frames_sent=1200480[0m
+[0;32mI (30299) TINYSINE_SIM: continuous output; frames_sent=1440480[0m
+[0;32mI (35299) TINYSINE_SIM: continuous output; frames_sent=1680480[0m
+[0;32mI (40299) TINYSINE_SIM: continuous output; frames_sent=1920480[0m
+[0;32mI (45299) TINYSINE_SIM: continuous output; frames_sent=2160480[0m
+[0;32mI (50299) TINYSINE_SIM: continuous output; frames_sent=2400960[0m
+[0;32mI (55299) TINYSINE_SIM: continuous output; frames_sent=2640960[0m
+[0;32mI (60299) TINYSINE_SIM: continuous output; frames_sent=2880960[0m
+[0;32mI (65299) TINYSINE_SIM: continuous output; frames_sent=3120960[0m
+[0;32mI (70299) TINYSINE_SIM: continuous output; frames_sent=3360960[0m
+[0;32mI (75299) TINYSINE_SIM: continuous output; frames_sent=3600960[0m
+[0;32mI (80299) TINYSINE_SIM: continuous output; frames_sent=3840960[0m
+[0;32mI (85299) TINYSINE_SIM: continuous output; frames_sent=4080960[0m
+[0;32mI (90299) TINYSINE_SIM: continuous output; frames_sent=4320960[0m
+[0;32mI (95299) TINYSINE_SIM: continuous output; frames_sent=4560960[0m
+[0;32mI (100299) TINYSINE_SIM: continuous output; frames_sent=4800960[0m
+[0;32mI (105299) TINYSINE_SIM: continuous output; frames_sent=5040960[0m
+[0;32mI (110299) TINYSINE_SIM: continuous output; frames_sent=5280960[0m
+[0;32mI (115299) TINYSINE_SIM: continuous output; frames_sent=5520960[0m
+[0;32mI (120299) TINYSINE_SIM: continuous output; frames_sent=5760960[0m
+[0;32mI (125299) TINYSINE_SIM: continuous output; frames_sent=6000960[0m
+[0;32mI (130299) TINYSINE_SIM: continuous output; frames_sent=6240960[0m
+[0;32mI (135299) TINYSINE_SIM: continuous output; frames_sent=6480960[0m
+[0;32mI (140299) TINYSINE_SIM: continuous output; frames_sent=6720960[0m
+[0;32mI (145299) TINYSINE_SIM: continuous output; frames_sent=6960960[0m
+[0;32mI (150299) TINYSINE_SIM: continuous output; frames_sent=7200960[0m
+[0;32mI (155299) TINYSINE_SIM: continuous output; frames_sent=7440960[0m
+[0;32mI (160299) TINYSINE_SIM: continuous output; frames_sent=7680960[0m
+[0;32mI (165299) TINYSINE_SIM: continuous output; frames_sent=7920960[0m
+[0;32mI (170299) TINYSINE_SIM: continuous output; frames_sent=8160960[0m
+[0;32mI (175299) TINYSINE_SIM: continuous output; frames_sent=8400960[0m
+[0;32mI (180299) TINYSINE_SIM: continuous output; frames_sent=8640960[0m
+[0;32mI (185299) TINYSINE_SIM: continuous output; frames_sent=8880960[0m
+[0;32mI (190299) TINYSINE_SIM: continuous output; frames_sent=9120960[0m
+[0;32mI (195299) TINYSINE_SIM: continuous output; frames_sent=9360960[0m
+[0;32mI (200299) TINYSINE_SIM: continuous output; frames_sent=9600960[0m
+[0;32mI (205299) TINYSINE_SIM: continuous output; frames_sent=9841440[0m
+[0;32mI (210299) TINYSINE_SIM: continuous output; frames_sent=10081440[0m
+[0;32mI (215299) TINYSINE_SIM: continuous output; frames_sent=10321440[0m
+[0;32mI (220299) TINYSINE_SIM: continuous output; frames_sent=10561440[0m
+[0;32mI (225299) TINYSINE_SIM: continuous output; frames_sent=10801440[0m
+[0;32mI (230299) TINYSINE_SIM: continuous output; frames_sent=11041440[0m
+[0;32mI (235299) TINYSINE_SIM: continuous output; frames_sent=11281440[0m
+[0;32mI (240299) TINYSINE_SIM: continuous output; frames_sent=11521440[0m
+[0;32mI (245299) TINYSINE_SIM: continuous output; frames_sent=11761440[0m
+[0;32mI (250299) TINYSINE_SIM: continuous output; frames_sent=12001440[0m
+[0;32mI (255299) TINYSINE_SIM: continuous output; frames_sent=12241440[0m
+[0;32mI (260299) TINYSINE_SIM: continuous output; frames_sent=12481440[0m
+[0;32mI (265299) TINYSINE_SIM: continuous output; frames_sent=12721440[0m
+[0;32mI (270299) TINYSINE_SIM: continuous output; frames_sent=12961440[0m
+[0;32mI (275299) TINYSINE_SIM: continuous output; frames_sent=13201440[0m
+[0;32mI (280299) TINYSINE_SIM: continuous output; frames_sent=13441440[0m
+[0;32mI (285299) TINYSINE_SIM: continuous output; frames_sent=13681440[0m
+[0;32mI (290299) TINYSINE_SIM: continuous output; frames_sent=13921440[0m
+[0;32mI (295299) TINYSINE_SIM: continuous output; frames_sent=14161440[0m
+[0;32mI (300299) TINYSINE_SIM: continuous output; frames_sent=14401440[0m
+[0;32mI (305299) TINYSINE_SIM: continuous output; frames_sent=14641440[0m
+[0;32mI (310299) TINYSINE_SIM: continuous output; frames_sent=14881440[0m
+[0;32mI (315299) TINYSINE_SIM: continuous output; frames_sent=15121440[0m
+[0;32mI (320299) TINYSINE_SIM: continuous output; frames_sent=15361440[0m
+[0;32mI (325299) TINYSINE_SIM: continuous output; frames_sent=15601440[0m
+[0;32mI (330299) TINYSINE_SIM: continuous output; frames_sent=15841440[0m
+[0;32mI (335299) TINYSINE_SIM: continuous output; frames_sent=16081440[0m
+[0;32mI (340299) TINYSINE_SIM: continuous output; frames_sent=16321440[0m
+[0;32mI (345299) TINYSINE_SIM: continuous output; frames_sent=16561440[0m
+[0;32mI (350299) TINYSINE_SIM: continuous output; frames_sent=16801440[0m
+[0;32mI (355299) TINYSINE_SIM: continuous output; frames_sent=17041440[0m
+[0;32mI (360299) TINYSINE_SIM: continuous output; frames_sent=17281920[0m
+[0;32mI (365299) TINYSINE_SIM: continuous output; frames_sent=17521920[0m
+[0;32mI (370299) TINYSINE_SIM: continuous output; frames_sent=17761920[0m
+[0;32mI (375299) TINYSINE_SIM: continuous output; frames_sent=18001920[0m
+[0;32mI (380299) TINYSINE_SIM: continuous output; frames_sent=18241920[0m
+[0;32mI (385299) TINYSINE_SIM: continuous output; frames_sent=18481920[0m
+[0;32mI (390299) TINYSINE_SIM: continuous output; frames_sent=18721920[0m
+[0;32mI (395299) TINYSINE_SIM: continuous output; frames_sent=18961920[0m
+[0;32mI (400299) TINYSINE_SIM: continuous output; frames_sent=19201920[0m
+[0;32mI (405299) TINYSINE_SIM: continuous output; frames_sent=19441920[0m
+[0;32mI (410299) TINYSINE_SIM: continuous output; frames_sent=19681920[0m
+[0;32mI (415299) TINYSINE_SIM: continuous output; frames_sent=19921920[0m
+[0;32mI (420299) TINYSINE_SIM: continuous output; frames_sent=20161920[0m
+[0;32mI (425299) TINYSINE_SIM: continuous output; frames_sent=20401920[0m
+[0;32mI (430299) TINYSINE_SIM: continuous output; frames_sent=20641920[0m
+[0;32mI (435299) TINYSINE_SIM: continuous output; frames_sent=20881920[0m
+[0;32mI (440299) TINYSINE_SIM: continuous output; frames_sent=21121920[0m
+[0;32mI (445299) TINYSINE_SIM: continuous output; frames_sent=21361920[0m
+[0;32mI (450299) TINYSINE_SIM: continuous output; frames_sent=21601920[0m
+[0;32mI (455299) TINYSINE_SIM: continuous output; frames_sent=21841920[0m
+[0;32mI (460299) TINYSINE_SIM: continuous output; frames_sent=22081920[0m
+[0;32mI (465299) TINYSINE_SIM: continuous output; frames_sent=22321920[0m
+[0;32mI (470299) TINYSINE_SIM: continuous output; frames_sent=22561920[0m
+[0;32mI (475299) TINYSINE_SIM: continuous output; frames_sent=22801920[0m
+[0;32mI (480299) TINYSINE_SIM: continuous output; frames_sent=23041920[0m
+[0;32mI (485299) TINYSINE_SIM: continuous output; frames_sent=23281920[0m
+[0;32mI (490299) TINYSINE_SIM: continuous output; frames_sent=23521920[0m
+[0;32mI (495299) TINYSINE_SIM: continuous output; frames_sent=23761920[0m
+[0;32mI (500299) TINYSINE_SIM: continuous output; frames_sent=24001920[0m
+[0;32mI (505299) TINYSINE_SIM: continuous output; frames_sent=24241920[0m
+[0;32mI (510299) TINYSINE_SIM: continuous output; frames_sent=24481920[0m
+[0;32mI (515299) TINYSINE_SIM: continuous output; frames_sent=24721920[0m
+[0;32mI (520299) TINYSINE_SIM: continuous output; frames_sent=24962400[0m
+[0;32mI (525299) TINYSINE_SIM: continuous output; frames_sent=25202400[0m
+[0;32mI (530299) TINYSINE_SIM: continuous output; frames_sent=25442400[0m
+[0;32mI (535299) TINYSINE_SIM: continuous output; frames_sent=25682400[0m
+[0;32mI (540299) TINYSINE_SIM: continuous output; frames_sent=25922400[0m
+[0;32mI (545299) TINYSINE_SIM: continuous output; frames_sent=26162400[0m
+[0;32mI (550299) TINYSINE_SIM: continuous output; frames_sent=26402400[0m
+[0;32mI (555299) TINYSINE_SIM: continuous output; frames_sent=26642400[0m
+[0;32mI (560299) TINYSINE_SIM: continuous output; frames_sent=26882400[0m
+[0;32mI (565299) TINYSINE_SIM: continuous output; frames_sent=27122400[0m
+[0;32mI (570299) TINYSINE_SIM: continuous output; frames_sent=27362400[0m
+[0;32mI (575299) TINYSINE_SIM: continuous output; frames_sent=27602400[0m
+[0;32mI (580299) TINYSINE_SIM: continuous output; frames_sent=27842400[0m
+[0;32mI (585299) TINYSINE_SIM: continuous output; frames_sent=28082400[0m
+[0;32mI (590299) TINYSINE_SIM: continuous output; frames_sent=28322400[0m
+[0;32mI (595299) TINYSINE_SIM: continuous output; frames_sent=28562400[0m
+[0;32mI (600299) TINYSINE_SIM: continuous output; frames_sent=28802400[0m
+[0;32mI (605299) TINYSINE_SIM: continuous output; frames_sent=29042400[0m
+[0;32mI (610299) TINYSINE_SIM: continuous output; frames_sent=29282400[0m
+[0;32mI (615299) TINYSINE_SIM: continuous output; frames_sent=29522400[0m
+[0;32mI (620299) TINYSINE_SIM: continuous output; frames_sent=29762400[0m
+[0;32mI (625299) TINYSINE_SIM: continuous output; frames_sent=30002400[0m
+[0;32mI (630299) TINYSINE_SIM: continuous output; frames_sent=30242400[0m
+[0;32mI (635299) TINYSINE_SIM: continuous output; frames_sent=30482400[0m
+[0;32mI (640299) TINYSINE_SIM: continuous output; frames_sent=30722400[0m
+[0;32mI (645299) TINYSINE_SIM: continuous output; frames_sent=30962400[0m
+[0;32mI (650299) TINYSINE_SIM: continuous output; frames_sent=31202400[0m
+[0;32mI (655299) TINYSINE_SIM: continuous output; frames_sent=31442400[0m
+[0;32mI (660299) TINYSINE_SIM: continuous output; frames_sent=31682400[0m
+[0;32mI (665299) TINYSINE_SIM: continuous output; frames_sent=31922400[0m
+[0;32mI (670299) TINYSINE_SIM: continuous output; frames_sent=32162400[0m
+[0;32mI (675299) TINYSINE_SIM: continuous output; frames_sent=32402880[0m
+[0;32mI (680299) TINYSINE_SIM: continuous output; frames_sent=32642880[0m
+[0;32mI (685299) TINYSINE_SIM: continuous output; frames_sent=32882880[0m
+[0;32mI (690299) TINYSINE_SIM: continuous output; frames_sent=33122880[0m
+[0;32mI (695299) TINYSINE_SIM: continuous output; frames_sent=33362880[0m
+[0;32mI (700299) TINYSINE_SIM: continuous output; frames_sent=33602880[0m
+[0;32mI (705299) TINYSINE_SIM: continuous output; frames_sent=33842880[0m
+[0;32mI (710299) TINYSINE_SIM: continuous output; frames_sent=34082880[0m
+[0;32mI (715299) TINYSINE_SIM: continuous output; frames_sent=34322880[0m
+[0;32mI (720299) TINYSINE_SIM: continuous output; frames_sent=34562880[0m
+[0;32mI (725299) TINYSINE_SIM: continuous output; frames_sent=34802880[0m
+[0;32mI (730299) TINYSINE_SIM: continuous output; frames_sent=35042880[0m
+[0;32mI (735299) TINYSINE_SIM: continuous output; frames_sent=35282880[0m
+[0;32mI (740299) TINYSINE_SIM: continuous output; frames_sent=35522880[0m
+[0;32mI (745299) TINYSINE_SIM: continuous output; frames_sent=35762880[0m
+[0;32mI (750299) TINYSINE_SIM: continuous output; frames_sent=36002880[0m
+[0;32mI (755299) TINYSINE_SIM: continuous output; frames_sent=36242880[0m
+[0;32mI (760299) TINYSINE_SIM: continuous output; frames_sent=36482880[0m
+[0;32mI (765299) TINYSINE_SIM: continuous output; frames_sent=36722880[0m
+[0;32mI (770299) TINYSINE_SIM: continuous output; frames_sent=36962880[0m
+[0;32mI (775299) TINYSINE_SIM: continuous output; frames_sent=37202880[0m
+[0;32mI (780299) TINYSINE_SIM: continuous output; frames_sent=37442880[0m
+[0;32mI (785299) TINYSINE_SIM: continuous output; frames_sent=37682880[0m
+[0;32mI (790299) TINYSINE_SIM: continuous output; frames_sent=37922880[0m
+[0;32mI (795299) TINYSINE_SIM: continuous output; frames_sent=38162880[0m
+[0;32mI (800299) TINYSINE_SIM: continuous output; frames_sent=38402880[0m
+[0;32mI (805299) TINYSINE_SIM: continuous output; frames_sent=38642880[0m
+[0;32mI (810299) TINYSINE_SIM: continuous output; frames_sent=38882880[0m
+[0;32mI (815299) TINYSINE_SIM: continuous output; frames_sent=39122880[0m
+[0;32mI (820299) TINYSINE_SIM: continuous output; frames_sent=39362880[0m
+[0;32mI (825299) TINYSINE_SIM: continuous output; frames_sent=39602880[0m
+[0;32mI (830299) TINYSINE_SIM: continuous output; frames_sent=39843360[0m
+[0;32mI (835299) TINYSINE_SIM: continuous output; frames_sent=40083360[0m
+[0;32mI (840299) TINYSINE_SIM: continuous output; frames_sent=40323360[0m
+[0;32mI (845299) TINYSINE_SIM: continuous output; frames_sent=40563360[0m
+[0;32mI (850299) TINYSINE_SIM: continuous output; frames_sent=40803360[0m
+[0;32mI (855299) TINYSINE_SIM: continuous output; frames_sent=41043360[0m
+[0;32mI (860299) TINYSINE_SIM: continuous output; frames_sent=41283360[0m
+[0;32mI (865299) TINYSINE_SIM: continuous output; frames_sent=41523360[0m
+[0;32mI (870299) TINYSINE_SIM: continuous output; frames_sent=41763360[0m
+[0;32mI (875299) TINYSINE_SIM: continuous output; frames_sent=42003360[0m
+[0;32mI (880299) TINYSINE_SIM: continuous output; frames_sent=42243360[0m
+[0;32mI (885299) TINYSINE_SIM: continuous output; frames_sent=42483360[0m
+[0;32mI (890299) TINYSINE_SIM: continuous output; frames_sent=42723360[0m
+[0;32mI (895299) TINYSINE_SIM: continuous output; frames_sent=42963360[0m
+[0;32mI (900299) TINYSINE_SIM: continuous output; frames_sent=43203360[0m
+[0;32mI (905299) TINYSINE_SIM: continuous output; frames_sent=43443360[0m
+[0;32mI (910299) TINYSINE_SIM: continuous output; frames_sent=43683360[0m
+[0;32mI (915299) TINYSINE_SIM: continuous output; frames_sent=43923360[0m
+[0;32mI (920299) TINYSINE_SIM: continuous output; frames_sent=44163360[0m
+[0;32mI (925299) TINYSINE_SIM: continuous output; frames_sent=44403360[0m
+[0;32mI (930299) TINYSINE_SIM: continuous output; frames_sent=44643360[0m
+[0;32mI (935299) TINYSINE_SIM: continuous output; frames_sent=44883360[0m
+[0;32mI (940299) TINYSINE_SIM: continuous output; frames_sent=45123360[0m
+[0;32mI (945299) TINYSINE_SIM: continuous output; frames_sent=45363360[0m
+[0;32mI (950299) TINYSINE_SIM: continuous output; frames_sent=45603360[0m
+[0;32mI (955299) TINYSINE_SIM: continuous output; frames_sent=45843360[0m
+[0;32mI (960299) TINYSINE_SIM: continuous output; frames_sent=46083360[0m
+[0;32mI (965299) TINYSINE_SIM: continuous output; frames_sent=46323360[0m
+[0;32mI (970299) TINYSINE_SIM: continuous output; frames_sent=46563360[0m
+[0;32mI (975299) TINYSINE_SIM: continuous output; frames_sent=46803360[0m
+[0;32mI (980299) TINYSINE_SIM: continuous output; frames_sent=47043360[0m
+[0;32mI (985299) TINYSINE_SIM: continuous output; frames_sent=47283840[0m
+[0;32mI (990299) TINYSINE_SIM: continuous output; frames_sent=47523840[0m
+[0;32mI (995299) TINYSINE_SIM: continuous output; frames_sent=47763840[0m
+[0;32mI (1000299) TINYSINE_SIM: continuous output; frames_sent=48003840[0m
+[0;32mI (1005299) TINYSINE_SIM: continuous output; frames_sent=48243840[0m
+[0;32mI (1010299) TINYSINE_SIM: continuous output; frames_sent=48483840[0m
+[0;32mI (1015299) TINYSINE_SIM: continuous output; frames_sent=48723840[0m
+[0;32mI (1020299) TINYSINE_SIM: continuous output; frames_sent=48963840[0m
+[0;32mI (1025299) TINYSINE_SIM: continuous output; frames_sent=49203840[0m
+[0;32mI (1030299) TINYSINE_SIM: continuous output; frames_sent=49443840[0m
+[0;32mI (1035299) TINYSINE_SIM: continuous output; frames_sent=49683840[0m
+[0;32mI (1040299) TINYSINE_SIM: continuous output; frames_sent=49923840[0m
+[0;32mI (1045299) TINYSINE_SIM: continuous output; frames_sent=50163840[0m
+[0;32mI (1050299) TINYSINE_SIM: continuous output; frames_sent=50403840[0m
+[0;32mI (1055299) TINYSINE_SIM: continuous output; frames_sent=50643840[0m
+[0;32mI (1060299) TINYSINE_SIM: continuous output; frames_sent=50883840[0m
+[0;32mI (1065299) TINYSINE_SIM: continuous output; frames_sent=51123840[0m
+[0;32mI (1070299) TINYSINE_SIM: continuous output; frames_sent=51363840[0m
+[0;32mI (1075299) TINYSINE_SIM: continuous output; frames_sent=51603840[0m
+[0;32mI (1080299) TINYSINE_SIM: continuous output; frames_sent=51843840[0m
+[0;32mI (1085299) TINYSINE_SIM: continuous output; frames_sent=52083840[0m
+[0;32mI (1090299) TINYSINE_SIM: continuous output; frames_sent=52323840[0m
+[0;32mI (1095299) TINYSINE_SIM: continuous output; frames_sent=52563840[0m
+[0;32mI (1100299) TINYSINE_SIM: continuous output; frames_sent=52803840[0m
+[0;32mI (1105299) TINYSINE_SIM: continuous output; frames_sent=53043840[0m
+[0;32mI (1110299) TINYSINE_SIM: continuous output; frames_sent=53283840[0m
+[0;32mI (1115299) TINYSINE_SIM: continuous output; frames_sent=53523840[0m
+[0;32mI (1120299) TINYSINE_SIM: continuous output; frames_sent=53763840[0m
+[0;32mI (1125299) TINYSINE_SIM: continuous output; frames_sent=54003840[0m
+[0;32mI (1130299) TINYSINE_SIM: continuous output; frames_sent=54243840[0m
+[0;32mI (1135299) TINYSINE_SIM: continuous output; frames_sent=54483840[0m
+[0;32mI (1140299) TINYSINE_SIM: continuous output; frames_sent=54723840[0m
+[0;32mI (1145299) TINYSINE_SIM: continuous output; frames_sent=54964320[0m
+[0;32mI (1150299) TINYSINE_SIM: continuous output; frames_sent=55204320[0m
+[0;32mI (1155299) TINYSINE_SIM: continuous output; frames_sent=55444320[0m
+[0;32mI (1160299) TINYSINE_SIM: continuous output; frames_sent=55684320[0m
+[0;32mI (1165299) TINYSINE_SIM: continuous output; frames_sent=55924320[0m
+[0;32mI (1170299) TINYSINE_SIM: continuous output; frames_sent=56164320[0m
+[0;32mI (1175299) TINYSINE_SIM: continuous output; frames_sent=56404320[0m
+[0;32mI (1180299) TINYSINE_SIM: continuous output; frames_sent=56644320[0m
+[0;32mI (1185299) TINYSINE_SIM: continuous output; frames_sent=56884320[0m
+[0;32mI (1190299) TINYSINE_SIM: continuous output; frames_sent=57124320[0m
+[0;32mI (1195299) TINYSINE_SIM: continuous output; frames_sent=57364320[0m
+[0;32mI (1200299) TINYSINE_SIM: continuous output; frames_sent=57604320[0m
+[0;32mI (1205299) TINYSINE_SIM: continuous output; frames_sent=57844320[0m
+[0;32mI (1210299) TINYSINE_SIM: continuous output; frames_sent=58084320[0m
+[0;32mI (1215299) TINYSINE_SIM: continuous output; frames_sent=58324320[0m
+[0;32mI (1220299) TINYSINE_SIM: continuous output; frames_sent=58564320[0m
+[0;32mI (1225299) TINYSINE_SIM: continuous output; frames_sent=58804320[0m
+[0;32mI (1230299) TINYSINE_SIM: continuous output; frames_sent=59044320[0m
+[0;32mI (1235299) TINYSINE_SIM: continuous output; frames_sent=59284320[0m
+[0;32mI (1240299) TINYSINE_SIM: continuous output; frames_sent=59524320[0m
+[0;32mI (1245299) TINYSINE_SIM: continuous output; frames_sent=59764320[0m
+[0;32mI (1250299) TINYSINE_SIM: continuous output; frames_sent=60004320[0m
+[0;32mI (1255299) TINYSINE_SIM: continuous output; frames_sent=60244320[0m
+[0;32mI (1260299) TINYSINE_SIM: continuous output; frames_sent=60484320[0m
+[0;32mI (1265299) TINYSINE_SIM: continuous output; frames_sent=60724320[0m
+[0;32mI (1270299) TINYSINE_SIM: continuous output; frames_sent=60964320[0m
+[0;32mI (1275299) TINYSINE_SIM: continuous output; frames_sent=61204320[0m
+[0;32mI (1280299) TINYSINE_SIM: continuous output; frames_sent=61444320[0m
+[0;32mI (1285299) TINYSINE_SIM: continuous output; frames_sent=61684320[0m
+[0;32mI (1290299) TINYSINE_SIM: continuous output; frames_sent=61924320[0m
+[0;32mI (1295299) TINYSINE_SIM: continuous output; frames_sent=62164320[0m
+[0;32mI (1300299) TINYSINE_SIM: continuous output; frames_sent=62404800[0m
+[0;32mI (1305299) TINYSINE_SIM: continuous output; frames_sent=62644800[0m
+[0;32mI (1310299) TINYSINE_SIM: continuous output; frames_sent=62884800[0m
+[0;32mI (1315299) TINYSINE_SIM: continuous output; frames_sent=63124800[0m
+[0;32mI (1320299) TINYSINE_SIM: continuous output; frames_sent=63364800[0m
+[0;32mI (1325299) TINYSINE_SIM: continuous output; frames_sent=63604800[0m
+[0;32mI (1330299) TINYSINE_SIM: continuous output; frames_sent=63844800[0m
+[0;32mI (1335299) TINYSINE_SIM: continuous output; frames_sent=64084800[0m
+[0;32mI (1340299) TINYSINE_SIM: continuous output; frames_sent=64324800[0m
+[0;32mI (1345299) TINYSINE_SIM: continuous output; frames_sent=64564800[0m
+[0;32mI (1350299) TINYSINE_SIM: continuous output; frames_sent=64804800[0m
+[0;32mI (1355299) TINYSINE_SIM: continuous output; frames_sent=65044800[0m
+[0;32mI (1360299) TINYSINE_SIM: continuous output; frames_sent=65284800[0m
+[0;32mI (1365299) TINYSINE_SIM: continuous output; frames_sent=65524800[0m
+[0;32mI (1370299) TINYSINE_SIM: continuous output; frames_sent=65764800[0m
+[0;32mI (1375299) TINYSINE_SIM: continuous output; frames_sent=66004800[0m
+[0;32mI (1380299) TINYSINE_SIM: continuous output; frames_sent=66244800[0m
+[0;32mI (1385299) TINYSINE_SIM: continuous output; frames_sent=66484800[0m
+[0;32mI (1390299) TINYSINE_SIM: continuous output; frames_sent=66724800[0m
+[0;32mI (1395299) TINYSINE_SIM: continuous output; frames_sent=66964800[0m
+[0;32mI (1400299) TINYSINE_SIM: continuous output; frames_sent=67204800[0m
+[0;32mI (1405299) TINYSINE_SIM: continuous output; frames_sent=67444800[0m
+[0;32mI (1410299) TINYSINE_SIM: continuous output; frames_sent=67684800[0m
+[0;32mI (1415299) TINYSINE_SIM: continuous output; frames_sent=67924800[0m
+[0;32mI (1420299) TINYSINE_SIM: continuous output; frames_sent=68164800[0m
+[0;32mI (1425299) TINYSINE_SIM: continuous output; frames_sent=68404800[0m
+[0;32mI (1430299) TINYSINE_SIM: continuous output; frames_sent=68644800[0m
+[0;32mI (1435299) TINYSINE_SIM: continuous output; frames_sent=68884800[0m
+[0;32mI (1440299) TINYSINE_SIM: continuous output; frames_sent=69124800[0m
+[0;32mI (1445299) TINYSINE_SIM: continuous output; frames_sent=69364800[0m
+[0;32mI (1450299) TINYSINE_SIM: continuous output; frames_sent=69604800[0m
+[0;32mI (1455299) TINYSINE_SIM: continuous output; frames_sent=69845280[0m
+[0;32mI (1460299) TINYSINE_SIM: continuous output; frames_sent=70085280[0m
+[0;32mI (1465299) TINYSINE_SIM: continuous output; frames_sent=70325280[0m
+[0;32mI (1470299) TINYSINE_SIM: continuous output; frames_sent=70565280[0m
+[0;32mI (1475299) TINYSINE_SIM: continuous output; frames_sent=70805280[0m
+[0;32mI (1480299) TINYSINE_SIM: continuous output; frames_sent=71045280[0m
+[0;32mI (1485299) TINYSINE_SIM: continuous output; frames_sent=71285280[0m
+[0;32mI (1490299) TINYSINE_SIM: continuous output; frames_sent=71525280[0m
+[0;32mI (1495299) TINYSINE_SIM: continuous output; frames_sent=71765280[0m
+[0;32mI (1500299) TINYSINE_SIM: continuous output; frames_sent=72005280[0m
+[0;32mI (1505299) TINYSINE_SIM: continuous output; frames_sent=72245280[0m
+[0;32mI (1510299) TINYSINE_SIM: continuous output; frames_sent=72485280[0m
+[0;32mI (1515299) TINYSINE_SIM: continuous output; frames_sent=72725280[0m
+[0;32mI (1520299) TINYSINE_SIM: continuous output; frames_sent=72965280[0m
+[0;32mI (1525299) TINYSINE_SIM: continuous output; frames_sent=73205280[0m
+[0;32mI (1530299) TINYSINE_SIM: continuous output; frames_sent=73445280[0m
+[0;32mI (1535299) TINYSINE_SIM: continuous output; frames_sent=73685280[0m
+[0;32mI (1540299) TINYSINE_SIM: continuous output; frames_sent=73925280[0m
+[0;32mI (1545299) TINYSINE_SIM: continuous output; frames_sent=74165280[0m
+[0;32mI (1550299) TINYSINE_SIM: continuous output; frames_sent=74405280[0m
+[0;32mI (1555299) TINYSINE_SIM: continuous output; frames_sent=74645280[0m
+[0;32mI (1560299) TINYSINE_SIM: continuous output; frames_sent=74885280[0m
+[0;32mI (1565299) TINYSINE_SIM: continuous output; frames_sent=75125280[0m
+[0;32mI (1570299) TINYSINE_SIM: continuous output; frames_sent=75365280[0m
+[0;32mI (1575299) TINYSINE_SIM: continuous output; frames_sent=75605280[0m
+[0;32mI (1580299) TINYSINE_SIM: continuous output; frames_sent=75845280[0m
+[0;32mI (1585299) TINYSINE_SIM: continuous output; frames_sent=76085280[0m
+[0;32mI (1590299) TINYSINE_SIM: continuous output; frames_sent=76325280[0m
+[0;32mI (1595299) TINYSINE_SIM: continuous output; frames_sent=76565280[0m
+[0;32mI (1600299) TINYSINE_SIM: continuous output; frames_sent=76805280[0m
+[0;32mI (1605299) TINYSINE_SIM: continuous output; frames_sent=77045280[0m
+[0;32mI (1610299) TINYSINE_SIM: continuous output; frames_sent=77285760[0m
+[0;32mI (1615299) TINYSINE_SIM: continuous output; frames_sent=77525760[0m
+[0;32mI (1620299) TINYSINE_SIM: continuous output; frames_sent=77765760[0m
+[0;32mI (1625299) TINYSINE_SIM: continuous output; frames_sent=78005760[0m
+[0;32mI (1630299) TINYSINE_SIM: continuous output; frames_sent=78245760[0m
+[0;32mI (1635299) TINYSINE_SIM: continuous output; frames_sent=78485760[0m
+[0;32mI (1640299) TINYSINE_SIM: continuous output; frames_sent=78725760[0m
+[0;32mI (1645299) TINYSINE_SIM: continuous output; frames_sent=78965760[0m
+[0;32mI (1650299) TINYSINE_SIM: continuous output; frames_sent=79205760[0m
+[0;32mI (1655299) TINYSINE_SIM: continuous output; frames_sent=79445760[0m
+[0;32mI (1660299) TINYSINE_SIM: continuous output; frames_sent=79685760[0m
+[0;32mI (1665299) TINYSINE_SIM: continuous output; frames_sent=79925760[0m
+[0;32mI (1670299) TINYSINE_SIM: continuous output; frames_sent=80165760[0m
+[0;32mI (1675299) TINYSINE_SIM: continuous output; frames_sent=80405760[0m
+[0;32mI (1680299) TINYSINE_SIM: continuous output; frames_sent=80645760[0m
+[0;32mI (1685299) TINYSINE_SIM: continuous output; frames_sent=80885760[0m
+[0;32mI (1690299) TINYSINE_SIM: continuous output; frames_sent=81125760[0m
+[0;32mI (1695299) TINYSINE_SIM: continuous output; frames_sent=81365760[0m
+[0;32mI (1700299) TINYSINE_SIM: continuous output; frames_sent=81605760[0m
+[0;32mI (1705299) TINYSINE_SIM: continuous output; frames_sent=81845760[0m
+[0;32mI (1710299) TINYSINE_SIM: continuous output; frames_sent=82085760[0m
+[0;32mI (1715299) TINYSINE_SIM: continuous output; frames_sent=82325760[0m
+[0;32mI (1720299) TINYSINE_SIM: continuous output; frames_sent=82565760[0m
+[0;32mI (1725299) TINYSINE_SIM: continuous output; frames_sent=82805760[0m
+[0;32mI (1730299) TINYSINE_SIM: continuous output; frames_sent=83045760[0m
+[0;32mI (1735299) TINYSINE_SIM: continuous output; frames_sent=83285760[0m
+[0;32mI (1740299) TINYSINE_SIM: continuous output; frames_sent=83525760[0m
+[0;32mI (1745299) TINYSINE_SIM: continuous output; frames_sent=83765760[0m
+[0;32mI (1750299) TINYSINE_SIM: continuous output; frames_sent=84005760[0m
+[0;32mI (1755299) TINYSINE_SIM: continuous output; frames_sent=84245760[0m
+[0;32mI (1760299) TINYSINE_SIM: continuous output; frames_sent=84485760[0m
+[0;32mI (1765299) TINYSINE_SIM: continuous output; frames_sent=84725760[0m
+[0;32mI (1770299) TINYSINE_SIM: continuous output; frames_sent=84966240[0m
+[0;32mI (1775299) TINYSINE_SIM: continuous output; frames_sent=85206240[0m
+[0;32mI (1780299) TINYSINE_SIM: continuous output; frames_sent=85446240[0m
+[0;32mI (1785299) TINYSINE_SIM: continuous output; frames_sent=85686240[0m
+[0;32mI (1790299) TINYSINE_SIM: continuous output; frames_sent=85926240[0m
+[0;32mI (1795299) TINYSINE_SIM: continuous output; frames_sent=86166240[0m
+[0;32mI (1800299) TINYSINE_SIM: continuous output; frames_sent=86406240[0m
+[0;32mI (1805299) TINYSINE_SIM: continuous output; frames_sent=86646240[0m
+[0;32mI (1810299) TINYSINE_SIM: continuous output; frames_sent=86886240[0m
+[0;32mI (1815299) TINYSINE_SIM: continuous output; frames_sent=87126240[0m
+[0;32mI (1820299) TINYSINE_SIM: continuous output; frames_sent=87366240[0m
+[0;32mI (1825299) TINYSINE_SIM: continuous output; frames_sent=87606240[0m
+[0;32mI (1830299) TINYSINE_SIM: continuous output; frames_sent=87846240[0m
+[0;32mI (1835299) TINYSINE_SIM: continuous output; frames_sent=88086240[0m
+[0;32mI (1840299) TINYSINE_SIM: continuous output; frames_sent=88326240[0m
+[0;32mI (1845299) TINYSINE_SIM: continuous output; frames_sent=88566240[0m
+[0;32mI (1850299) TINYSINE_SIM: continuous output; frames_sent=88806240[0m
+[0;32mI (1855299) TINYSINE_SIM: continuous output; frames_sent=89046240[0m
+[0;32mI (1860299) TINYSINE_SIM: continuous output; frames_sent=89286240[0m
+[0;32mI (1865299) TINYSINE_SIM: continuous output; frames_sent=89526240[0m
+[0;32mI (1870299) TINYSINE_SIM: continuous output; frames_sent=89766240[0m
+[0;32mI (1875299) TINYSINE_SIM: continuous output; frames_sent=90006240[0m
+[0;32mI (1880299) TINYSINE_SIM: continuous output; frames_sent=90246240[0m
+[0;32mI (1885299) TINYSINE_SIM: continuous output; frames_sent=90486240[0m
+[0;32mI (1890299) TINYSINE_SIM: continuous output; frames_sent=90726240[0m
+[0;32mI (1895299) TINYSINE_SIM: continuous output; frames_sent=90966240[0m
+[0;32mI (1900299) TINYSINE_SIM: continuous output; frames_sent=91206240[0m
+[0;32mI (1905299) TINYSINE_SIM: continuous output; frames_sent=91446240[0m
+[0;32mI (1910299) TINYSINE_SIM: continuous output; frames_sent=91686240[0m
+[0;32mI (1915299) TINYSINE_SIM: continuous output; frames_sent=91926240[0m
+[0;32mI (1920299) TINYSINE_SIM: continuous output; frames_sent=92166240[0m
+[0;32mI (1925299) TINYSINE_SIM: continuous output; frames_sent=92406720[0m
+[0;32mI (1930299) TINYSINE_SIM: continuous output; frames_sent=92646720[0m
+[0;32mI (1935299) TINYSINE_SIM: continuous output; frames_sent=92886720[0m
+[0;32mI (1940299) TINYSINE_SIM: continuous output; frames_sent=93126720[0m
+[0;32mI (1945299) TINYSINE_SIM: continuous output; frames_sent=93366720[0m
+[0;32mI (1950299) TINYSINE_SIM: continuous output; frames_sent=93606720[0m
+[0;32mI (1955299) TINYSINE_SIM: continuous output; frames_sent=93846720[0m
+[0;32mI (1960299) TINYSINE_SIM: continuous output; frames_sent=94086720[0m
+[0;32mI (1965299) TINYSINE_SIM: continuous output; frames_sent=94326720[0m

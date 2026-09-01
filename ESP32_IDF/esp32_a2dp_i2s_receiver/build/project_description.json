@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_a2dp_i2s_receiver",
-    "project_version":    "f8dde93-dirty",
+    "project_version":    "10b4844-dirty",
     "project_path":       "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver",
     "idf_path":           "/home/hannes-karlsson/.espressif/v5.4.4/esp-idf",
     "build_dir":          "/home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/build",

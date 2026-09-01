@@ -1,0 +1,5 @@
+Error: Monitor requires standard input to be attached to TTY. Try using a different terminal.
+idf_monitor failed with exit code 1, output of the command is in the /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/build/log/idf_py_stderr_output_127390 and /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/build/log/idf_py_stdout_output_127390
+Executing action: monitor
+Running idf_monitor in directory /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver
+Executing "/home/hannes-karlsson/.espressif/python_env/idf5.4_py3.14_env/bin/python /home/hannes-karlsson/.espressif/v5.4.4/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/hannes-karlsson/Audio/ESP32_audio/ESP32_IDF/esp32_a2dp_i2s_receiver/build/esp32_a2dp_i2s_receiver.elf -m '/home/hannes-karlsson/.espressif/python_env/idf5.4_py3.14_env/bin/python' '/home/hannes-karlsson/.espressif/v5.4.4/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'"...

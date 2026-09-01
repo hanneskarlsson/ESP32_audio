@@ -1,0 +1,191 @@
+I (24240) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=2 tot_under=66
+W (24290) BT_APPL: Sequence numbers error, recv:0x2a9, expect:0x2a7, recount:0x0
+W (24570) BT_APPL: Sequence numbers error, recv:0x2b5, expect:0x2b3, recount:0x0
+W (25020) BT_APPL: Sequence numbers error, recv:0x2c8, expect:0x2c5, recount:0x0
+I (25240) A2DP_RECEIVER: PCM rx=135168 B/s fill=0 min=0 max=30720 d_over=0 d_under=5 d_bad=0 d_i2s=0 starts=0 d_prefill=5 tot_over=2 tot_under=71
+W (25510) BT_APPL: Sequence numbers error, recv:0x2dd, expect:0x2d9, recount:0x0
+W (25760) BT_APPL: Sequence numbers error, recv:0x2e8, expect:0x2e6, recount:0x0
+W (25990) BT_APPL: Sequence numbers error, recv:0x2f2, expect:0x2f0, recount:0x0
+W (26210) BT_APPL: Sequence numbers error, recv:0x2fc, expect:0x2fa, recount:0x0
+I (26240) A2DP_RECEIVER: PCM rx=155648 B/s fill=12288 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=2 tot_under=75
+W (26700) BT_APPL: Sequence numbers error, recv:0x310, expect:0x30d, recount:0x0
+W (26950) BT_APPL: Sequence numbers error, recv:0x31c, expect:0x319, recount:0x0
+W (27180) BT_APPL: Sequence numbers error, recv:0x325, expect:0x324, recount:0x0
+I (27240) A2DP_RECEIVER: PCM rx=163840 B/s fill=24576 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=2 tot_under=79
+W (27430) BT_APPL: Sequence numbers error, recv:0x330, expect:0x32e, recount:0x0
+W (27660) BT_APPL: Sequence numbers error, recv:0x33a, expect:0x338, recount:0x0
+W (27910) BT_APPL: Sequence numbers error, recv:0x345, expect:0x343, recount:0x0
+W (28200) BT_APPL: Sequence numbers error, recv:0x351, expect:0x34f, recount:0x0
+I (28240) A2DP_RECEIVER: PCM rx=131072 B/s fill=10240 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=2 tot_under=83
+W (28470) BT_APPL: Sequence numbers error, recv:0x35d, expect:0x35b, recount:0x0
+W (28730) BT_APPL: Sequence numbers error, recv:0x368, expect:0x366, recount:0x0
+W (28980) BT_APPL: Sequence numbers error, recv:0x373, expect:0x371, recount:0x0
+I (29240) A2DP_RECEIVER: PCM rx=135168 B/s fill=0 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=2 tot_under=87
+W (29260) BT_APPL: Sequence numbers error, recv:0x37f, expect:0x37d, recount:0x0
+W (29740) BT_APPL: Sequence numbers error, recv:0x394, expect:0x390, recount:0x0
+W (30040) BT_APPL: Sequence numbers error, recv:0x3a0, expect:0x39e, recount:0x0
+I (30240) A2DP_RECEIVER: PCM rx=143360 B/s fill=0 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=2 tot_under=91
+W (30270) BT_APPL: Sequence numbers error, recv:0x3aa, expect:0x3a8, recount:0x0
+W (30720) BT_APPL: Sequence numbers error, recv:0x3be, expect:0x3ba, recount:0x0
+W (31220) BT_APPL: Sequence numbers error, recv:0x3d3, expect:0x3d1, recount:0x0
+I (31240) A2DP_RECEIVER: PCM rx=147456 B/s fill=4096 min=0 max=30720 d_over=1 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=95
+W (31450) BT_APPL: Sequence numbers error, recv:0x3dd, expect:0x3db, recount:0x0
+W (31750) BT_APPL: Sequence numbers error, recv:0x3ea, expect:0x3e8, recount:0x0
+I (32240) A2DP_RECEIVER: PCM rx=176128 B/s fill=28672 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=99
+W (32460) BT_APPL: Sequence numbers error, recv:0x409, expect:0x403, recount:0x0
+W (32740) BT_APPL: Sequence numbers error, recv:0x415, expect:0x413, recount:0x0
+W (33020) BT_APPL: Sequence numbers error, recv:0x421, expect:0x41f, recount:0x0
+I (33240) A2DP_RECEIVER: PCM rx=114688 B/s fill=4096 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=103
+W (33500) BT_APPL: Sequence numbers error, recv:0x436, expect:0x432, recount:0x0
+W (33730) BT_APPL: Sequence numbers error, recv:0x440, expect:0x43e, recount:0x0
+W (33990) BT_APPL: Sequence numbers error, recv:0x44a, expect:0x449, recount:0x0
+I (34240) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=107
+W (34260) BT_APPL: Sequence numbers error, recv:0x456, expect:0x454, recount:0x0
+W (34710) BT_APPL: Sequence numbers error, recv:0x46a, expect:0x466, recount:0x0
+W (34990) BT_APPL: Sequence numbers error, recv:0x476, expect:0x474, recount:0x0
+I (35240) A2DP_RECEIVER: PCM rx=147456 B/s fill=0 min=0 max=30720 d_over=0 d_under=3 d_bad=0 d_i2s=0 starts=0 d_prefill=3 tot_over=3 tot_under=110
+W (35270) BT_APPL: Sequence numbers error, recv:0x482, expect:0x480, recount:0x0
+W (35520) BT_APPL: Sequence numbers error, recv:0x48d, expect:0x48b, recount:0x0
+W (35800) BT_APPL: Sequence numbers error, recv:0x499, expect:0x497, recount:0x0
+W (36060) BT_APPL: Sequence numbers error, recv:0x4a4, expect:0x4a2, recount:0x0
+I (36240) A2DP_RECEIVER: PCM rx=155648 B/s fill=6144 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=114
+W (36330) BT_APPL: Sequence numbers error, recv:0x4af, expect:0x4ae, recount:0x0
+W (36560) BT_APPL: Sequence numbers error, recv:0x4b9, expect:0x4b7, recount:0x0
+W (36790) BT_APPL: Sequence numbers error, recv:0x4c3, expect:0x4c1, recount:0x0
+W (37060) BT_APPL: Sequence numbers error, recv:0x4cf, expect:0x4cd, recount:0x0
+I (37240) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=118
+W (37290) BT_APPL: Sequence numbers error, recv:0x4d9, expect:0x4d7, recount:0x0
+W (37570) BT_APPL: Sequence numbers error, recv:0x4e5, expect:0x4e3, recount:0x0
+W (38030) BT_APPL: Sequence numbers error, recv:0x4f8, expect:0x4f5, recount:0x0
+I (38240) A2DP_RECEIVER: PCM rx=147456 B/s fill=2048 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=122
+W (38310) BT_APPL: Sequence numbers error, recv:0x505, expect:0x502, recount:0x0
+W (38580) BT_APPL: Sequence numbers error, recv:0x510, expect:0x50f, recount:0x0
+W (38860) BT_APPL: Sequence numbers error, recv:0x51c, expect:0x51a, recount:0x0
+W (39160) BT_APPL: Sequence numbers error, recv:0x529, expect:0x527, recount:0x0
+I (39240) A2DP_RECEIVER: PCM rx=155648 B/s fill=12288 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=126
+W (39380) BT_APPL: Sequence numbers error, recv:0x532, expect:0x531, recount:0x0
+W (39620) BT_APPL: Sequence numbers error, recv:0x53d, expect:0x53a, recount:0x0
+W (39920) BT_APPL: Sequence numbers error, recv:0x54a, expect:0x548, recount:0x0
+W (40150) BT_APPL: Sequence numbers error, recv:0x554, expect:0x552, recount:0x0
+I (40240) A2DP_RECEIVER: PCM rx=155648 B/s fill=24576 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=130
+W (40430) BT_APPL: Sequence numbers error, recv:0x560, expect:0x55e, recount:0x0
+W (40710) BT_APPL: Sequence numbers error, recv:0x56c, expect:0x56a, recount:0x0
+W (40990) BT_APPL: Sequence numbers error, recv:0x578, expect:0x576, recount:0x0
+W (41220) BT_APPL: Sequence numbers error, recv:0x582, expect:0x580, recount:0x0
+I (41240) A2DP_RECEIVER: PCM rx=122880 B/s fill=8192 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=134
+W (41450) BT_APPL: Sequence numbers error, recv:0x58c, expect:0x58a, recount:0x0
+I (42240) A2DP_RECEIVER: PCM rx=151552 B/s fill=6144 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=138
+W (42340) BT_APPL: Sequence numbers error, recv:0x5b2, expect:0x5ab, recount:0x0
+W (42620) BT_APPL: Sequence numbers error, recv:0x5be, expect:0x5bc, recount:0x0
+W (42890) BT_APPL: Sequence numbers error, recv:0x5ca, expect:0x5c8, recount:0x0
+I (43240) A2DP_RECEIVER: PCM rx=147456 B/s fill=8192 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=142
+W (43350) BT_APPL: Sequence numbers error, recv:0x5de, expect:0x5da, recount:0x0
+W (43630) BT_APPL: Sequence numbers error, recv:0x5ea, expect:0x5e8, recount:0x0
+W (43900) BT_APPL: Sequence numbers error, recv:0x5f6, expect:0x5f4, recount:0x0
+W (44180) BT_APPL: Sequence numbers error, recv:0x602, expect:0x600, recount:0x0
+I (44240) A2DP_RECEIVER: PCM rx=159744 B/s fill=24576 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=146
+W (44460) BT_APPL: Sequence numbers error, recv:0x60e, expect:0x60c, recount:0x0
+W (44870) BT_APPL: Sequence numbers error, recv:0x61e, expect:0x61c, recount:0x0
+W (45100) BT_APPL: Sequence numbers error, recv:0x628, expect:0x626, recount:0x0
+I (45240) A2DP_RECEIVER: PCM rx=126976 B/s fill=6144 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=150
+W (45330) BT_APPL: Sequence numbers error, recv:0x633, expect:0x630, recount:0x0
+W (45580) BT_APPL: Sequence numbers error, recv:0x63e, expect:0x63c, recount:0x0
+W (45860) BT_APPL: Sequence numbers error, recv:0x64a, expect:0x648, recount:0x0
+W (46140) BT_APPL: Sequence numbers error, recv:0x656, expect:0x654, recount:0x0
+I (46240) A2DP_RECEIVER: PCM rx=151552 B/s fill=12288 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=154
+W (46360) BT_APPL: Sequence numbers error, recv:0x660, expect:0x65e, recount:0x0
+W (46820) BT_APPL: Sequence numbers error, recv:0x673, expect:0x670, recount:0x0
+W (47090) BT_APPL: Sequence numbers error, recv:0x67f, expect:0x67d, recount:0x0
+I (47240) A2DP_RECEIVER: PCM rx=147456 B/s fill=14336 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=158
+W (47370) BT_APPL: Sequence numbers error, recv:0x68b, expect:0x689, recount:0x0
+W (47650) BT_APPL: Sequence numbers error, recv:0x697, expect:0x695, recount:0x0
+W (47880) BT_APPL: Sequence numbers error, recv:0x6a1, expect:0x69f, recount:0x0
+W (48110) BT_APPL: Sequence numbers error, recv:0x6ab, expect:0x6a9, recount:0x0
+I (48240) A2DP_RECEIVER: PCM rx=143360 B/s fill=12288 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=162
+W (48370) BT_APPL: Sequence numbers error, recv:0x6b6, expect:0x6b4, recount:0x0
+W (48820) BT_APPL: Sequence numbers error, recv:0x6c9, expect:0x6c6, recount:0x0
+W (49050) BT_APPL: Sequence numbers error, recv:0x6d3, expect:0x6d1, recount:0x0
+I (49240) A2DP_RECEIVER: PCM rx=135168 B/s fill=2048 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=166
+W (49300) BT_APPL: Sequence numbers error, recv:0x6de, expect:0x6dc, recount:0x0
+W (49550) BT_APPL: Sequence numbers error, recv:0x6e9, expect:0x6e7, recount:0x0
+W (49800) BT_APPL: Sequence numbers error, recv:0x6f4, expect:0x6f2, recount:0x0
+W (50210) BT_APPL: Sequence numbers error, recv:0x705, expect:0x702, recount:0x0
+I (50240) A2DP_RECEIVER: PCM rx=147456 B/s fill=16384 min=0 max=30720 d_over=0 d_under=5 d_bad=0 d_i2s=0 starts=0 d_prefill=5 tot_over=3 tot_under=171
+W (50480) BT_APPL: Sequence numbers error, recv:0x711, expect:0x70f, recount:0x0
+W (50710) BT_APPL: Sequence numbers error, recv:0x71b, expect:0x719, recount:0x0
+W (51170) BT_APPL: Sequence numbers error, recv:0x72f, expect:0x72b, recount:0x0
+I (51240) A2DP_RECEIVER: PCM rx=163840 B/s fill=26624 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=3 tot_under=175
+W (51450) BT_APPL: Sequence numbers error, recv:0x73b, expect:0x739, recount:0x0
+W (51730) BT_APPL: Sequence numbers error, recv:0x747, expect:0x745, recount:0x0
+W (51950) BT_APPL: Sequence numbers error, recv:0x750, expect:0x74f, recount:0x0
+W (52230) BT_APPL: Sequence numbers error, recv:0x75c, expect:0x75b, recount:0x0
+I (52240) A2DP_RECEIVER: PCM rx=118784 B/s fill=0 min=0 max=30720 d_over=1 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=4 tot_under=179
+W (52670) BT_APPL: Sequence numbers error, recv:0x76f, expect:0x76b, recount:0x0
+W (52950) BT_APPL: Sequence numbers error, recv:0x77b, expect:0x779, recount:0x0
+W (53200) BT_APPL: Sequence numbers error, recv:0x786, expect:0x784, recount:0x0
+I (53240) A2DP_RECEIVER: PCM rx=159744 B/s fill=10240 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=4 tot_under=183
+W (53480) BT_APPL: Sequence numbers error, recv:0x792, expect:0x790, recount:0x0
+W (53750) BT_APPL: Sequence numbers error, recv:0x79e, expect:0x79c, recount:0x0
+W (54030) BT_APPL: Sequence numbers error, recv:0x7aa, expect:0x7a8, recount:0x0
+I (54240) A2DP_RECEIVER: PCM rx=143360 B/s fill=2048 min=0 max=30720 d_over=0 d_under=3 d_bad=0 d_i2s=0 starts=0 d_prefill=3 tot_over=4 tot_under=186
+W (54310) BT_APPL: Sequence numbers error, recv:0x7b6, expect:0x7b4, recount:0x0
+W (54540) BT_APPL: Sequence numbers error, recv:0x7c0, expect:0x7be, recount:0x0
+W (54770) BT_APPL: Sequence numbers error, recv:0x7ca, expect:0x7c8, recount:0x0
+W (55020) BT_APPL: Sequence numbers error, recv:0x7d4, expect:0x7d3, recount:0x0
+I (55240) A2DP_RECEIVER: PCM rx=147456 B/s fill=2048 min=0 max=30720 d_over=1 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=5 tot_under=190
+W (55300) BT_APPL: Sequence numbers error, recv:0x7e0, expect:0x7df, recount:0x0
+W (55760) BT_APPL: Sequence numbers error, recv:0x7f4, expect:0x7f0, recount:0x0
+W (56040) BT_APPL: Sequence numbers error, recv:0x800, expect:0x7fe, recount:0x0
+I (56240) A2DP_RECEIVER: PCM rx=135168 B/s fill=0 min=0 max=30720 d_over=0 d_under=5 d_bad=0 d_i2s=0 starts=0 d_prefill=5 tot_over=5 tot_under=195
+W (56430) BT_APPL: Sequence numbers error, recv:0x80e, expect:0x80d, recount:0x0
+W (56660) BT_APPL: Sequence numbers error, recv:0x819, expect:0x816, recount:0x0
+W (56670) BT_APPL: Sequence numbers error, recv:0x81b, expect:0x81a, recount:0x0
+W (56940) BT_APPL: Sequence numbers error, recv:0x827, expect:0x825, recount:0x0
+W (57220) BT_APPL: Sequence numbers error, recv:0x833, expect:0x831, recount:0x0
+I (57240) A2DP_RECEIVER: PCM rx=151552 B/s fill=8192 min=0 max=30720 d_over=1 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=6 tot_under=199
+W (57470) BT_APPL: Sequence numbers error, recv:0x83e, expect:0x83c, recount:0x0
+W (57750) BT_APPL: Sequence numbers error, recv:0x84a, expect:0x848, recount:0x0
+W (58030) BT_APPL: Sequence numbers error, recv:0x856, expect:0x854, recount:0x0
+I (58240) A2DP_RECEIVER: PCM rx=139264 B/s fill=0 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=6 tot_under=203
+W (58510) BT_APPL: Sequence numbers error, recv:0x86b, expect:0x868, recount:0x0
+W (58740) BT_APPL: Sequence numbers error, recv:0x875, expect:0x873, recount:0x0
+W (59020) BT_APPL: Sequence numbers error, recv:0x881, expect:0x87f, recount:0x0
+I (59240) A2DP_RECEIVER: PCM rx=151552 B/s fill=4096 min=0 max=30720 d_over=1 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=7 tot_under=207
+W (59450) BT_APPL: Sequence numbers error, recv:0x893, expect:0x890, recount:0x0
+W (59690) BT_APPL: Sequence numbers error, recv:0x89d, expect:0x89b, recount:0x0
+W (60170) BT_APPL: Sequence numbers error, recv:0x8b2, expect:0x8ae, recount:0x0
+I (60240) A2DP_RECEIVER: PCM rx=159744 B/s fill=14336 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=7 tot_under=211
+W (60600) BT_APPL: Sequence numbers error, recv:0x8c3, expect:0x8c1, recount:0x0
+W (60610) BT_APPL: Sequence numbers error, recv:0x8c5, expect:0x8c4, recount:0x0
+W (60880) BT_APPL: Sequence numbers error, recv:0x8d1, expect:0x8ce, recount:0x0
+W (61110) BT_APPL: Sequence numbers error, recv:0x8db, expect:0x8d9, recount:0x0
+I (61240) A2DP_RECEIVER: PCM rx=147456 B/s fill=16384 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=7 tot_under=215
+W (61390) BT_APPL: Sequence numbers error, recv:0x8e7, expect:0x8e5, recount:0x0
+W (61670) BT_APPL: Sequence numbers error, recv:0x8f3, expect:0x8f1, recount:0x0
+W (61920) BT_APPL: Sequence numbers error, recv:0x8fe, expect:0x8fc, recount:0x0
+W (62200) BT_APPL: Sequence numbers error, recv:0x90a, expect:0x908, recount:0x0
+I (62240) A2DP_RECEIVER: PCM rx=135168 B/s fill=16384 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=7 tot_under=219
+W (62480) BT_APPL: Sequence numbers error, recv:0x916, expect:0x914, recount:0x0
+W (63140) BT_APPL: Sequence numbers error, recv:0x932, expect:0x92e, recount:0x0
+I (63240) A2DP_RECEIVER: PCM rx=155648 B/s fill=14336 min=0 max=30720 d_over=1 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=8 tot_under=223
+W (63370) BT_APPL: Sequence numbers error, recv:0x93c, expect:0x93a, recount:0x0
+W (64230) BT_APPL: Sequence numbers error, recv:0x961, expect:0x95a, recount:0x0
+I (64240) A2DP_RECEIVER: PCM rx=122880 B/s fill=0 min=0 max=30720 d_over=0 d_under=5 d_bad=0 d_i2s=0 starts=0 d_prefill=5 tot_over=8 tot_under=228
+W (64460) BT_APPL: Sequence numbers error, recv:0x96b, expect:0x969, recount:0x0
+W (64920) BT_APPL: Sequence numbers error, recv:0x97f, expect:0x97b, recount:0x0
+W (65200) BT_APPL: Sequence numbers error, recv:0x98b, expect:0x989, recount:0x0
+I (65240) A2DP_RECEIVER: PCM rx=159744 B/s fill=10240 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=8 tot_under=232
+W (65450) BT_APPL: Sequence numbers error, recv:0x996, expect:0x994, recount:0x0
+W (65710) BT_APPL: Sequence numbers error, recv:0x9a1, expect:0x99f, recount:0x0
+W (65960) BT_APPL: Sequence numbers error, recv:0x9ac, expect:0x9aa, recount:0x0
+I (66240) A2DP_RECEIVER: PCM rx=151552 B/s fill=16384 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=8 tot_under=236
+W (66390) BT_APPL: Sequence numbers error, recv:0x9bd, expect:0x9bb, recount:0x0
+W (66670) BT_APPL: Sequence numbers error, recv:0x9ca, expect:0x9c7, recount:0x0
+W (66940) BT_APPL: Sequence numbers error, recv:0x9d6, expect:0x9d4, recount:0x0
+W (67220) BT_APPL: Sequence numbers error, recv:0x9e2, expect:0x9e0, recount:0x0
+I (67240) A2DP_RECEIVER: PCM rx=131072 B/s fill=8192 min=0 max=30720 d_over=0 d_under=4 d_bad=0 d_i2s=0 starts=0 d_prefill=4 tot_over=8 tot_under=240
+W (67470) BT_APPL: Sequence numbers error, recv:0x9ed, expect:0x9eb, recount:0x0
+W (68220) BT_APPL: Sequence numbers error, recv:0xa0d, expect:0xa0c, recount:0x0
+I (68240) A2DP_RECEIVER: PCM rx=163840 B/s fill=8192 min=0 max=30720 d_over=1 d_under=2 d_bad=0 d_i2s=0 starts=0 d_prefill=2 tot_over=9 tot_under=242
+W (68490) BT_APPL: Sequence numbers error, recv:0xa19, expect:0xa17, recount:0x0
+W (68770) BT_APPL: Sequence numbers error, recv:0xa25, expect:0xa23, recount:0x0
